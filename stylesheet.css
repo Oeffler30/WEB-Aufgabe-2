@@ -112,3 +112,7 @@ nav ul li:hover, #footer li:hover{
   text-decoration: none;
   color: #fff;
 }
+
+span {
+	font-weight: bold;
+}
