@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //get the vertical scrollbar position in this document
         var st = document.documentElement.scrollTop;
 
-        if (window.innerWidth > 578) {// if the device is a phone, don't do anything with the header
+        if (window.innerWidth > 768) {// if the device is a tablet, don't do anything with the header
 
             //select the header
             var header = document.querySelector("#header");
@@ -23,10 +23,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //now do it every time the user scrolls or resizes window
-    window.addEventListener('scroll', function (event) {
+    window.addEventListener('scroll', function () {
         scroll_set_header();
     });
     window.addEventListener('resize', function () {
         scroll_set_header();
     });
+
+    var icon = document.querySelector(".icon");
+    icon.addEventListener("click", function () {
+        var header = document.querySelector("#header");
+        var content = document.querySelector(".content-container");
+        var nav = document.querySelector("#nav");
+
+        if(header.classList.contains("not-collapsed")
+        && content.classList.contains("not-collapsed")
+        && nav.classList.contains("not-collapsed")){
+            header.setAttribute("class", "");
+            content.setAttribute("class", "content-container");
+            nav.setAttribute("class", "");
+        } else {
+            header.setAttribute("class", "not-collapsed");
+            nav.setAttribute("class", "not-collapsed");
+            content.setAttribute("class", "content-container not-collapsed");
+        }
+    })
 });

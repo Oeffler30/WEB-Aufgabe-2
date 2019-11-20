@@ -54,13 +54,14 @@ body{
   background-color: #2f3136;
 }
 
-nav {
+
+#nav {
   /*position the navbar like the content container*/
   margin: 0 10%;
   width: 80%;
 }
 
-nav ul li{
+#nav ul li{
   /*display the li elements inline but still sizable*/
   display: inline-block;
   width: 15%;
@@ -71,7 +72,7 @@ nav ul li{
   background-color: red;
 }
 
-nav ul li a{
+#nav ul li a{
   font-size: 15pt;
   padding: 0.5em;
   box-sizing: border-box;
@@ -86,7 +87,7 @@ nav ul li a{
 }
 
 
-nav ul li:hover, #footer li:hover{
+#nav ul li:hover, #footer li:hover{
   /*wenn man über die navigation oder über den footer hovert, soll sich der hintergrund ändern*/
   background-color: #1565C0;
 }
@@ -127,4 +128,81 @@ nav ul li:hover, #footer li:hover{
   display: inline-block;
   text-decoration: none;
   color: #fff;
+}
+
+#navbar .icon {
+  /*looks*/
+  color: white;
+  background-color: #2f3136;
+  /*positioning*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*size*/
+  width: 1em;
+  padding: 1em;
+  font-size: 15px;
+  text-align: center;
+  /*icon-characteristics*/
+  cursor: pointer;
+  display: none;
+}
+
+/* icon lines*/
+#navbar .icon hr {
+  margin: 3px 0 0;
+}
+
+/*below 768px*/
+@media screen and (max-width: 768px) {
+
+  #header {
+    overflow-y: unset;
+  }
+  #header-image {
+    display: none;
+  }
+
+  #navbar {
+    /*the icons position is dependent on this*/
+    position: relative;
+  }
+
+  .icon {
+    /*show icon*/
+    /*note: !important after a css value overrides the css order rules*/
+    display: block !important;
+  }
+  .icon:hover {
+    background-color: #1565C0 !important;
+  }
+
+  #nav {
+    margin: 0;
+    width: 100%;
+    /*default is hidden unless it has the non-collapsed class which is added via js*/
+    display: none;
+  }
+
+  #nav ul li {
+    /*let li elements take 100% width*/
+    display: block;
+    width: 100%;
+  }
+
+  .content-container {
+    margin: 3em auto 0;
+    width: 95%;
+  }
+  .content-container.not-collapsed {
+    /*formel für ersten wert : (4 + (anzahl der nav elemente *2))em*/
+    margin: 14em auto 0;
+  }
+
+  /*show nav after the icon is clicked*/
+  #nav.not-collapsed {
+    display: block;
+  }
+
+
 }
