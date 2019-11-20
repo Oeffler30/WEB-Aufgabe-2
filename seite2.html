@@ -4,8 +4,8 @@
     <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <meta charset="UTF-8">
+  <title>HTML</title>
     <script src="scroll+navicon.js"></script>
-  <title>WEB Gruppe A4</title>
 </head>
 <body>
     <div id="header">
@@ -14,10 +14,13 @@
             <nav>
                 <ul>
                   <li><a href="index.html">Startseite</a></li>
-                  <li><a href="seite1.html">Seite 1</a></li>
-                  <li id="current"><a href="seite2.html">Seite 2</a></li>
-                  <li><a href="seite3.html">Seite 3</a></li>
-                  <li><a href="seite4.html">Seite 4</a></li>
+                  <li><a href="seite1.html">Grundlagen</a></li>
+                  <li id="current"><a href="seite2.html">HTML</a></li>
+                  <li><a href="seite3.html">CSS</a></li>
+                  <li><a href="seite4.html">Javascript</a></li>
+                  <li><a href="seite5.html">Backend-Technologien</a></li>
+                  <li><a href="seite6.html">PHP</a></li>
+                  <li><a href="seite7.html">NodeJS</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,5 +53,45 @@
             <li><a href="Impressum.html">Impressum</a></li>
         </ul>
     </div>
+<script>
+
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function init() {
+        var user=getCookie("webHSMA");
+        if (user != "") {
+            var ausgabe = document.getElementById('info');
+            ausgabe.innerHTML = user;
+        } else {
+            var ausgabe = document.getElementById('info');
+            ausgabe.innerHTML = "Sie sind zum ersten Mal auf unsere Seite, viel Spaß beim lernen";
+            setCookie("webHSMA", "Startseite", 30);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', setCookie("webHSMA", "HTML", 30));
+
+</script>
 </body>
 </html>
