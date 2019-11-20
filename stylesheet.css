@@ -1,13 +1,18 @@
-body{
-  background-color: #36393f;
-  color: white;
-  font-family: Calibri;
-  <!-- Some settings to fix some ugly standard body settings so we can override them cleanly later -->
+*{
+  /*Some settings to fix some ugly standard element settings like standard margins or paddings
+   so we can override them cleanly later*/
   padding: 0;
   margin: 0;
 }
 
+body{
+  background-color: #36393f;
+  color: white;
+  font-family: Calibri;
+}
+
 .content-container {
+  /*display the text boxes in the middle*/
   width: 80%;
   margin: 14em auto 0;
 }
@@ -17,40 +22,46 @@ body{
   width: 100%;
   position: fixed;
   top: 0;
-  //hide the blur overflow from the background-picture;
+  /*hide the blur overflow from the background-picture*/
   margin-top: -5px;
   overflow-y: hidden;
+  /*make the collapsing of the header go smoothly*/
+  transition: 0.5s;
+}
+
+.header_scroll_collapsed {
+  height: 7em !important;
 }
 
 #header-image {
   background-image: url("header3.jpg");
   height: 100%;
   width: 100%;
+  /*position the background picture nicely*/
   background-size: cover;
   background-position-y: 100%;
   background-position-x: 82%;
+  /*make the background picture blurry*/
   filter: blur(3px);
 }
 
 #navbar{
 
+  /*make the navbar stick to the bottom of the header*/
   position: absolute;
-  bottom: 0.01em;
+  bottom: 0;
   width: 100%;
   background-color: #2f3136;
 }
 
 nav {
+  /*position the navbar like the content container*/
   margin: 0 10%;
   width: 80%;
 }
 
-nav ul{
-  margin: 0;
-  padding: 0;
-}
-
 nav ul li{
+  /*display the li elements inline but still sizable*/
   display: inline-block;
   width: 15%;
   text-align: center;
@@ -64,22 +75,26 @@ nav ul li a{
   font-size: 15pt;
   padding: 0.5em;
   box-sizing: border-box;
-  //box-sizing: padding + width 100% sorgen nicht mehr dafür dass das a element größer ist als es sollte;
+  /*box-sizing border-box wirkung: padding + width 100% sorgen nicht mehr dafür dass
+  das a element größer ist als es sollte;*/
   text-decoration: none;
   color: white;
   width: 100%;
   height: 100%;
+  /*damit man das element noch resizen kann*/
   display: inline-block;
 }
 
+
 nav ul li:hover, #footer li:hover{
+  /*wenn man über die navigation oder über den footer hovert, soll sich der hintergrund ändern*/
   background-color: #1565C0;
 }
 
 .textbox {
   background-color: #2f3136;
   padding: 1em;
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .footer-container {
@@ -87,6 +102,7 @@ nav ul li:hover, #footer li:hover{
   height: 30px;
   background-color: #2f3136;
 }
+
 #footer {
   margin: 0;
   padding: 0;
