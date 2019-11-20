@@ -200,7 +200,7 @@ span {
   }
   .content-container.not-collapsed {
     /*formel für ersten wert : (4 + (anzahl der nav elemente *2))em*/
-    margin: 14em auto 0;
+    margin: 23em auto 0;
   }
 
   /*show nav after the icon is clicked*/
