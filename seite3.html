@@ -8,7 +8,20 @@
   <title>WEB Gruppe A4</title>
 </head>
 <body>
+    <script>
+        document.body.className = document.body.className + " js_enabled";
+    </script>
     <div id="header">
+        <!-- Cookie Banner -->
+    <div id="cookie-message">
+        <p>
+            Dieser Webseite benutzt Cookie um dir eine individellisierte Webseite präsentieren zu können.
+            <a href="datenschutz.html" title="View our Cookie Policy">Finde mehr heraus über Cookies und Datenschutz</a>
+        </p>
+        <form>
+            <input id="knopf" type="button" value="Zur Kenntnis genommen" onclick="hide()">
+        </form>
+    </div>
         <div id="header-image"></div>
         <div id="navbar">
             <div id="nav">
@@ -16,8 +29,8 @@
                     <li><a href="index.html">Startseite</a></li>
                     <li><a href="seite1.html">Grundlagen</a></li>
                     <li><a href="seite2.html">HTML</a></li>
-                    <li><a href="seite3.html">CSS</a></li>
-                    <li id="current"><a href="seite4.html">Javascript</a></li>
+                    <li id="current"><a href="seite3.html">CSS</a></li>
+                    <li><a href="seite4.html">Javascript</a></li>
                     <li><a href="seite5.html">Backend-Technologien</a></li>
                     <li><a href="seite6.html">PHP</a></li>
                     <li><a href="seite7.html">NodeJS</a></li>
@@ -31,7 +44,7 @@
         </div>
     </div>
     <div class="content-container">
-        <h1>Seite 3</h1>
+        <h1>CSS</h1>
 
         <div class="textbox">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -58,46 +71,7 @@
             <li><a href="Impressum.html">Impressum</a></li>
         </ul>
     </div>
-<script>
-
-    function setCookie(cname,cvalue,exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    function init() {
-        var user=getCookie("webHSMA");
-        if (user != "") {
-            var ausgabe = document.getElementById('info');
-            ausgabe.innerHTML = user;
-        } else {
-            var ausgabe = document.getElementById('info');
-            ausgabe.innerHTML = "Sie sind zum ersten Mal auf unsere Seite, viel Spaß beim lernen";
-            setCookie("webHSMA", "Startseite", 30);
-        }
-    }
-    
-    window.addEventListener('DOMContentLoaded', setCookie("webHSMA", "Javascript", 30));
-    
-</script>
+<script src="cookie.js"></script>
 
 </body>
 </html>

@@ -4,13 +4,28 @@
     <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <meta charset="UTF-8">
-  <title>WEB Gruppe A4</title>
+    <script src="scroll+navicon.js"></script>
+  <title>Datenschutz</title>
 </head>
 <body>
+    <script>
+    document.body.className = document.body.className + " js_enabled";
+    </script>
+        
     <div id="header">
+    <!-- Cookie Banner -->
+    <div id="cookie-message">
+        <p>
+            Dieser Webseite benutzt Cookie um dir eine individellisierte Webseite präsentieren zu können.
+            <a href="datenschutz.html" title="View our Cookie Policy">Finde mehr heraus über Cookies und Datenschutz</a>
+        </p>
+        <form>
+            <input id="knopf" type="button" value="Zur Kenntnis genommen" onclick="hide()">
+        </form>
+    </div>
         <div id="header-image"></div>
         <div id="navbar">
-            <nav>
+            <div id="nav">
                 <ul>
                     <li><a href="index.html">Startseite</a></li>
                     <li><a href="seite1.html">Grundlagen</a></li>
@@ -21,18 +36,22 @@
                     <li><a href="seite6.html">PHP</a></li>
                     <li><a href="seite7.html">NodeJS</a></li>
                 </ul>
-            </nav>
+            </div>
+            <a class="icon">
+                <hr>
+                <hr>
+                <hr>
+            </a>
         </div>
     </div>
     <div class="content-container">
-        <h1>Seite 4</h1>
 
         <div class="textbox">
             <p><strong><big>Datenschutzerklärung</big></strong></p>
 <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
 <p><strong>Benennung der verantwortlichen Stelle</strong></p>
 <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-<p><span id="s3-t-firma">WEB A4</span><br><span id="s3-t-ansprechpartner">Hoang Minh Phan</span><br><span id="s3-t-strasse">Paul-Wittsack-Straße 10</span><br><span id="s3-t-plz">68163</span> <span id="s3-t-ort">Mannheim</span></p><p></p>
+<p><span id="s3-t-firma">Web</span><br><span id="s3-t-ansprechpartner">WEB Team A4</span><br><span id="s3-t-strasse">Paul-Wittsack-Straße 10</span><br><span id="s3-t-plz">68163</span> <span id="s3-t-ort">Mannheim</span></p><p></p>
 <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
 
 <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
@@ -68,5 +87,6 @@
             <li><a href="Impressum.html">Impressum</a></li>
         </ul>
     </div>
+    <script src="cookie.js"></script>
 </body>
 </html>
