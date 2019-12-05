@@ -38,7 +38,7 @@
             cookieMessage.style.display = 'block';
             
             var ausgabe = document.getElementById('info');
-            ausgabe.innerHTML = "Sie sind zum ersten Mal auf unsere Seite, viel Spaß beim lernen";
+            ausgabe.innerHTML = "Sie sind zum ersten Mal auf unserer Seite, viel Spaß beim Lernen";
 			var titel = document.title;
             setCookie("webHSMA", titel, 365);
         }
