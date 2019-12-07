@@ -184,8 +184,9 @@ body{
   margin: 3px 0 0;
 }
 
-span {
+#info {
     font-weight: bold;
+    color: aliceblue;
 }
 
 /*below 768px*/

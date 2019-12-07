@@ -32,7 +32,23 @@
         if (user != "") {
 			cookieMessage.style.display = 'none';
             var ausgabe = document.getElementById('info');
-            ausgabe.innerHTML = user;
+	    var link = document.createElement("a");
+	    var infoText = user;
+	    	if(user == "HTML") {
+			user = "html5";
+		} else if(user == "CSS") {
+			user = "css3";
+		} else if(user == "JSP, Servlets, JAXB") {
+			user = "jsp_servlets_jaxb";
+		} else if(user == "WEB Grundlagen") {
+			user = "grundlagen"
+		}
+	    var linkText = user.toLowerCase() + ".html"
+	    link.setAttribute("href", linkText);
+	    var text = link.href;
+	    var textNode = document.createTextNode(infoText);
+	    link.appendChild(textNode);
+	    ausgabe.appendChild(link);
         } else {
             //openPopUp
             cookieMessage.style.display = 'block';
