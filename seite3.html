@@ -47,10 +47,150 @@
         <h1>CSS</h1>
 
         <div class="textbox">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <h2> Grundlegendes zu CSS3 </h2>
+          <br/>
+          <h3> Die Geschichte von CSS3 </h3>
+            <p>CSS steht für Cascading Style Sheets und wurde im Jahre 1995 von Hakon Wium Lee und Bert Bos im Namen des World Wide Web Consortiums (W3C) entwickelt. Es wurde 1994 von Hakon Wium Lee vorgeschlagen. Bert Bos damals an dem Darstellungsprogramm „Argo“, für welches er eine eigene Stilvorlagensprache verwendete. Die beiden entschieden sich zusammen zu arbeiten und CSS zu entwickeln. 1995 wurde dann das W3C auf  CSS aufmerksam und zeigte Interesse an dem Konzept.<br/> Zu der Zeit gab es bereits weitere Sprachen mit dem gleichen Ziel, doch CSS bot mit der Idee Regeln zu definieren, die über mehrere Stilvorlagen hinweg vererbt  werden können, eine entscheidende Neuerung. Im Jahre 1996 wurde dann die erste Version von CSS publiziert. Heute unterstützt nahezu jeder Browser CSS und es ist fast auf  jeder Website zu finden.<br/> Die aktuelle Version ist CSS Level 3 oder kurz CSS3.</p>
+            <br/>
+            <h3> Neuerungen in CSS3 </h3>
+            <p>CSS3 ist modular aufgebaut. Das heißt, dass es nicht als Gesamtpaket erscheint, sondern in einzelnen Modulen, wie z.B. Selectors oder Colors. Die ersten Module erschienen 2011. Auch heute werden noch neue CSS3 Module veröffentlicht, bspw. Das Images Modul, welches im Oktober 2019 erschien. Jedes Modul beinhaltet Zahlreiche Neuerungen zu seinem Vorgänge.<br/> Diese können im Detail unter der <a href="https://www.w3.org/Style/CSS/current-work"> Webseite des W3C </a> nachgelesen werden.</p>
+            <br/>
+            <h3> Die Idee von Cascading Style Sheets </h3>
+            <p>Zur Strukturierung von Inhalten einer Website dient HTML. Doch es wird auch eine Möglichkeit zu deren Formatierung benötigt. Hierzu dient CSS. Es kann auch für XML-Dokumente verwendet werden. Cascading Style Sheets heißt übersetzt kaskadierende Stilvorlagen. Eine Definition von kaskadierend lautet „das stufenförmige Anordnen von Bauelementen“3. Dieser Begriff wird verwendet, da in CSS mehrere Angaben auf ein Element verwendet werden können, wie in folgendem Beispiel:<br/>
+              p{<br/>
+                  font-size: 16pt;<br/>   font-color: blue;<br/>  background-color: white;<br/>   margin: 2px;<br/>
+              }<br/>
+            Hier werden mehrere stilistische Angaben auf das p-Tag verwendet. Das Wort Stilvorlagen ist etwas konkreter und wird verwendet, da in CSS der Stil einer Website beschrieben wird.<br/> Ein CSS Dokument kann in mehrere HTML Dokumente eingebunden werden. Somit wird sichergestellt, dass eine Webseite mit all ihren Unterseiten ein einheitliches Layout verwendet. Dies erleichtert auch die Wartungsarbeiten an einer Webseite, denn eine stilistische Änderung muss so nur an einer Stelle durchgeführt werden und nicht für jede Unterseite einzeln.</p>
+            <br/>
         </div>
         <div class="textbox">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <h2> Aufbau einer CSS Datei </h2>
+          <br/>
+          <h3>Selektoren</h3>
+          <br/>
+          <h4>Universalselektor</h4>
+            <p>Der erste Teil einer Style Anweisung innerhalb einer CSS Datei ist immer der Selektor. Er zeigt welches Element einer HTML- oder XML-Datei von den Stil Anweisungen betroffen sein soll<br/>
+              Es gibt verschiedenste Arten von Selektoren. Die allgemeinste wäre der Universalselektor *. Wird dieser verwendet, so wirken sich die darin befindlichen Anweisungen auf alle Elemente in der Datei aus, in der das css eingebunden ist. Eine häufige Anwendung hierfür sieht wie folgt aus<br/>
+              *{<br/>
+                margin: 0;<br/>
+                padding: 0;<br/>
+              }<br/>Hierdurch werden sämtliche vordefinierten Abstände auf 0 gesetzt.
+            </p>
+            <br/>
+            <h4>Elementselektor</h4>
+            <p>Eine weiter Art von Selektoren sind die Elementselektoren. Sie sprechen ein bestimmtes Element in der HTML/XML Datei an, z.b. ein p Selektor für einen Paragraphen.6 Dies kann folgendermaßen aussehen:<br/>
+              p{<br/>
+                font-size: 14pt;<br/>
+                text-allign: center;<br/>
+                color: blue;<br/>
+              }<br/>
+              Dies würde die Schriftgröße auf 14 setzen, den Text zentriert ausrichten und blau Färben.
+            </p>
+            <br/>
+            <h4>Id- und Klassenselektoren</h4>
+            <p>Zuletzt gibt es noch die ID- und Klassenselektoren. In HTML gibt es die Möglichkeit einem Element, mittels eines ID- oder eines class-Attributes, eine  Id oder eine Klasse zu verleihen. Diese lassen sich dann in CSS ansprechen.7 In dem folgenden Anwendungsbeispiel sehen Sie einen Beispielhaften HTML Auszug, in dem sowohl ein ID, als auch ein class Attribut verwendet wird:<br/>
+              &ltdiv class=&quotnavbar&quot&gt<br/>
+              &ltul&gt<br/>
+                 &ltli id=&quotcurrent&quot&gt&lta href=&quotindex.html&quot&gtStartseite&lt/a&gt&lt/li&gt<br/>
+                 &ltli&gt&lta href=&quotseite1.html&quot&gtUnterseite 1&lt/a&gt&lt/li&gt<br/>
+                 &ltli&gt&lta href=&quotseite2.html&quot&gtUnterseite 2&lt/a&gt&lt/li&gt<br/>
+             &lt/ul&gt<br/>
+             &lt/div&gt<br/>
+             Dieser HTML Ausschnitt stellt eine beispielhafte Navigationsleiste dar, die mit CSS angesprochen werden kann. Dieses kann wie folgt aussehen:<br/>
+             div.navbar{<br/>
+               position: absolute;<br/>
+               bottom: 0;<br/>
+               width: 100%;<br/>
+               background-color: #2f3136;<br/>
+             }<br/>
+             #current a{<br/>
+               background-color: red;<br/>
+             } <br/>
+             Der obere Selektor spricht das div Element mit der Klasse navbar an und bestimmt dessen Position, Breite und Farbe. <br/>
+             Der untere Selektor spricht die ID current an, sucht in dem Element mit dieser ID ein a Element und Färbt dessen Hintergrund rot. In diesem Fall dient dies dem Zweck, dass die Unterseite, auf der man sich aktuell befindet, in der Navigationsleiste rot eingefärbt wird.
+            </p>
+            <br/>
+            <h4>Eltern- und Kindselektoren</h4>
+            <p>Selektoren lassen sich auch verschachteln, sodass Elternselektoren und Kinderselektoren entstehen.
+              Möchte man eine Kindselektor ansprechen so schreibt man zunächst die Elternselektoren hin und durch ein Leerzeichen getrennt den Kindselektor. Beispiel:<br/>
+              div ul li a{<br/>
+                background-color: red;<br/>
+              }<br/>
+              Der Elternselektor von a ist hier li, dessen Elternselektor ist ul und dessen Elternselektor ist div. Hier werden alle a-Elemente angesprochen, die sich in einem Listenelement eine ungeordneten Liste befinden, welche von einem div Block umschlossen wird. Ein Elternselektor kann auch mehrere Kindselektoren haben, die sich auf gleicher Ebene befinden. Möchte man mehrere Kindselektoren auf der gleichen Ebene ansprechen, so werden diese durch ein + getrennt, z.b. div ul + ol{…}.
+            </p>
+            <br/>
+            <br/>
+            <h3>Pseudoklassen</h3>
+            <p>Es gibt in CSS auch sogenannte Pseudoklassen. Diese stellen keine tatsächlichen Elemente im HTML Dokument dar, sondern werden in der Regel für zustände benutzt. Sie werden durch einen Doppelpunkt hinter dem angesprochenen Element eingeleitet. Es wird zum Beispiel verwendet um das Verhalten eines Element beim darüber hovern mit der Maus zu beschreiben oder um das Verhalten eines Links zu beschreiben, wenn dieser angeklickt wurde. Dies kann folgendermaßen aussehen:<br/>
+              a:hover{<br/>
+                color: purple;<br/>
+              }<br/>
+              a:visited{<br/>
+                color: grey;<br/>
+              }<br/>
+              a:active{<br/>
+                color: red;<br/>
+            }<br/>
+            Dieser CSS Ausschnitt sorgt dafür, dass Links beim darüber hovern mit der Maus lila werden, sie grau angezeigt werden, wenn sie schon besucht wurden und sie rot sind sofern sie gerade aktiv sind.
+            </p>
+            <br/>
+            <h3>Deklarationen</h3>
+            <p>Des Weiteren besteht eine CSS Datei aus Deklarationen. Dies sind die Anweisungen, welche in den geschweiften Klammern eines Selektors stehen. Sie geben eine Beschreibung darüber, wie das jeweilige Segment gestaltet werden soll. Jede Deklaration besteht aus einem oder mehreren Key-value-Paaren, abgeschlossen durch ein Semikolon, wie in folgendem Beispiel zu sehen:<br/>
+              *{<br/>
+                margin: 0;<br/>
+                padding: 0;<br/>
+                background-color: grey;<br/>
+              }<br/>
+              Die drei Anweisungen zwischen den geschweiften Klammern sind die Deklarationen. Dabei ist beispielsweise margin der Key mit dem value 0. Hier werden die äußeren Abstände der gesamten Datei standardmäßig auf 0 gesetzt und die Hintergrundfarbe auf Grau.
+            </p>
+            <br/>
+            <h3>Kommentare</h3>
+            <p>In CSS kann es, wie auch in anderen Sprachen, hilfreich sein seinen Code gut  zu Kommentieren. Kommentare werden in CSS durch /* eingeleitet und mit */ beendet. Alles dazwischen bildet den Kommentar. Üblicherweise schreibt man seinen Kommentar über den zu kommentierenden Code Block.</p>
+            <br/>
+            <h3>Gerüst einer CSS Datei am Beispiel</h3>
+            <p>
+              Aus den Elementen, welche wir im vorgehenden Unterkapitel gesehen haben kann man nun eine CSS Datei bauen. Eine solche kann wie folgt aussehen:<br/>
+              /*Zunächst werden die äußeren Abstände standardmäßig auf 0 gesetzt*/<br/>
+              *{<br/>
+                padding: 0;<br/>
+                margin: 0;<br/>
+              }<br/>
+              /*Dann werden Farben und Schriften für den Body der html Datei festgelegt*/<br/>
+              body{<br/>
+                background-color: #36393f;<br/>
+                color: white;<br/>
+                font-family: Calibri;<br/>
+              }<br/>
+              /*Hier werden einige Einstellungen für den Kopf der Website vorgenommen*/<br/>
+              #header {<br/>
+                height:13em;<br/>
+                width: 100%;<br/>
+                position: fixed;<br/>
+                top: 0;<br/>
+                margin-top: -5px;<br/>
+                overflow-y: hidden;<br/>
+                transition: 0.5s;<br/>
+              }<br/>
+              /*Hier wird die Navigationsleiste Formatiert*/<br/>
+              #navbar{<br/>
+                position: absolute;<br/>
+                bottom: 0;<br/>
+                width: 100%;<br/>
+                background-color: #2f3136;<br/>
+              }<br/>
+              /*Hier werden Einstellungen für die Fußleiste vorgenommen*/<br/>
+              #footer {<br/>
+                margin: 0;<br/>
+                padding: 0;<br/>
+                list-style-type: none;<br/>
+                width: 50%;<br/>
+                height: 100%;<br/>
+                margin-left: auto;<br/>
+                margin-right: auto;<br/>
+              }<br/>
+              So kann ein Gerüst für eine CSS Datei aussehen. Im Anwendungsfall werden dann in der Regel noch einzelne Designs für die verschiedenen Einzelelemente festgelegt.
+            </p>
+            <br/>
         </div>
         <div class="textbox">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
