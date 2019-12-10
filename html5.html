@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <meta charset="UTF-8">
+  <title>HTML</title>
+    <script src="scroll+navicon.js"></script>    
+    <style>
+        .inhaltverzeichnis {text-decoration: none;}
+        
+        p { margin-top: 1em; margin-bottom: 1em;}
+        
+    </style>
+    
+    
+</head>
+<body>
+    <script>
+        document.body.className = document.body.className + " js_enabled";
+    </script>
+    <div id="header">
+        <!-- Cookie Banner -->
+    <div id="cookie-message">
+        <p>
+            Diese Webseite benutzt einen Cookie um dir eine individualisierte Webseite präsentieren zu können.
+            <a href="datenschutz.html" title="View our Cookie Policy">Finde mehr heraus über Cookies und Datenschutz</a>
+        </p>
+        <form>
+            <input id="knopf" type="button" value="Nicht Einverstanden" onclick="hide()">
+            <input id="knopf" type="button" value="Einverstanden" onclick="acceptCookie()">
+        </form>
+    </div>
+        <div id="header-image"></div>
+        <div id="navbar">
+            <div id="nav">
+                <ul>
+                  <li><a href="index.html">Startseite</a></li>
+                  <li><a href="grundlagen.html">Grundlagen</a></li>
+                  <li id="current"><a href="html5.html">HTML</a></li>
+                  <li><a href="css3.html">CSS</a></li>
+                  <li><a href="javascript.html">Javascript</a></li>
+                  <li><a href="jsp_servlets_jaxb.html">JSP, Servlets, JAXB</a></li>
+                  <li><a href="php.html">PHP</a></li>
+                  <li><a href="nodejs.html">NodeJS</a></li>
+                </ul>
+            </div>
+            <a class="icon">
+                <hr>
+                <hr>
+                <hr>
+            </a>
+        </div>
+    </div>
+    <div class="content-container">
+        
+        
+        <div class="textbox">
+        <h1 style="font-size: 2.5em" id="verzeichnis">HTML - Die Sprache des Internet</h1>
+        	<h1>Inhaltsverzeichnis</h1>
+        	<div class="content">
+        		<a class="inhaltverzeichnis" href=#kapitel1>1&emsp;Einführung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel2>2&emsp;Was ist HTML</a><br>
+            	<a class="inhaltverzeichnis" href=#kapitel21>&emsp;2.1&emsp;Aufbau eines HTML Befehl</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel22>&emsp;2.2&emsp;Aufbau eines HTML Dokument</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel221>&emsp;&emsp;2.2.1&emsp;Der HTML-Tag</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel222>&emsp;&emsp;2.2.2&emsp;Der HEAD-Block</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel223>&emsp;&emsp;2.2.3&emsp;Der BODY-Block</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel23>&emsp;2.3&emsp;Anlegen eines HTML Dokument</a><br>
+            	<a class="inhaltverzeichnis" href=#kapitel2z>&emsp;Zusammenfassung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel2a>&emsp;Aufgaben zur Selbstüberprüfung</a><br>
+                
+                <a class="inhaltverzeichnis" href=#kapitel3>3&emsp;Grundlegende HTML Tag im HEAD Block einer HTML Datei</a><br>
+            	<a class="inhaltverzeichnis" href=#kapitel31>&emsp;3.1&emsp;Der title Tag – Der Name einer Webseite</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel32>&emsp;3.2&emsp;Der meta Tag – Unsichtbare Daten für den Webbrowser/die Suchmaschine</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel321>&emsp;&emsp;3.2.1&emsp;Charset – Die Zeichenkodierung einer Webseite</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel322>&emsp;&emsp;3.2.2&emsp;Name/Content – Wertepaare im Meta Tag</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel33>&emsp;3.3&emsp;refresh – Seite neu laden oder Weiterleiten</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel34>&emsp;3.4&emsp;set-cookie – Cookie ohne JavaScript</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel35>&emsp;3.5&emsp;Der link Tag – zur Einbindung externe Dateien</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel36>&emsp;3.6&emsp;Der style Tag – Globale CSS Eigenschaften</a><br>
+            	<a class="inhaltverzeichnis" href=#kapitel1Zsm>&emsp;Zusammenfassung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel1Zsm>&emsp;Aufgaben zur Selbstüberprüfung</a><br>
+                
+                <a class="inhaltverzeichnis" href=#kapitel4>4&emsp;HTML Tag zur Textformatierung und Strukturierung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel41>&emsp;4.1&emsp;Grundlegende HTML Tags</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel42>&emsp;4.2&emsp;Textformatierung in HTML</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel421>&emsp;&emsp;4.2.1&emsp;Heading Tag – Überschriften</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel422>&emsp;&emsp;4.2.2&emsp;Paragraph Tag – Textabsätze und Break Tag – Zeilenumbruch</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel423>&emsp;&emsp;4.2.3&emsp;Horizontal Ruler Tag – Thematische Brüche</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel424>&emsp;&emsp;4.2.4&emsp;Weitere HTML Tags zur Textformatierung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel43>&emsp;4.3&emsp;Anpassung von Inline-Elemente mittels span Tag</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel44>&emsp;4.4&emsp;Anchor Tag - Verweise</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel441>&emsp;&emsp;4.4.1&emsp;Aufbau eines Verweises</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel442>&emsp;&emsp;4.4.2&emsp;Verweisanker anlegen</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel45>&emsp;4.5&emsp;Image Tag - Bilder</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel46>&emsp;4.6&emsp;Listen</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel461>&emsp;&emsp;4.6.1&emsp;Ordered List – Geordnete Liste</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel462>&emsp;&emsp;4.6.2&emsp;Unordnered List – Ungeordnete Liste</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel463>&emsp;&emsp;4.6.3&emsp;Description List – Beschreibungsliste</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel47>&emsp;4.7&emsp;Tabelle</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel48>&emsp;4.8&emsp;Division Tag - Bereich</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel4z>&emsp;Zusammenfassung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel4a>&emsp;Aufgaben zur Selbstüberprüfung</a><br>  
+                
+                <a class="inhaltverzeichnis" href=#kapitel5>5&emsp;HTML5</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel51>&emsp;5.1&emsp;Naiver Video- und Audio Wiedergabe</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel52>&emsp;5.2&emsp;Inhaltabhängige Gliederungselementen</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel53>&emsp;5.3&emsp;Formular Elemente</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel54>&emsp;5.4&emsp;Canvas Element</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel55>&emsp;5.5&emsp;Offline Datenspeicherung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel56>&emsp;5.6&emsp;Standortabfragen</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel5z>&emsp;Zusammenfassung</a><br>
+                <a class="inhaltverzeichnis" href=#kapitel5a>&emsp;Aufgaben zur Selbstüberprüfung</a><br>  
+            </div>
+    	</div>
+            
+        
+        <div class="textbox">
+            <h1>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Einf&uuml;hrung</h1>
+            <p>HTML ist die Abk&uuml;rzung von Hypertext Markup Language, eine Auszeichnungssprache, die die Grundlage f&uuml;r das sichtbare World Wide Web liefert. Fast alle Webseite werden mittels HTML dargestellt, von Social Media Plattformen wie Facebook bis zu Videoplattformen wie YouTube, dabei ist HTML urspr&uuml;nglich von Sir Tim Berners-Lee dazu entwickelt worden um wissenschaftliche Informationen strukturiert darzustellen und zu teilen.</p>
+            <p>Die Anf&auml;nge von HTML geht auf das Jahr 1989 zur&uuml;ck, wo die erste HTML Version von Tim Berners-Lee am CERN in Genf vorgestellt wurde. Der erste Webbrowser Prototyp ''NeXT'' stammte ebenfalls von Tim Berners-Lee und wurde 1990 ver&ouml;ffentlich. vgl. [DRJLIAMK98, Kapitel 2]</p>
+            <p>Am 28.10.2018 ver&ouml;ffentlichte das World Wide Web Consortium (W3C) die aktuellste Version von HTML, HTML5. Dieses l&ouml;ste HTML4 sowie XHTML ab.</p>
+            <p>In dieser Ausarbeitung werden wir uns mit den Grundlagen von HTML sowie dessen Anwendung zur Erstellung einer einfachen Webseite besch&auml;ftigen. Zudem werden wir uns einige wichtige Neuerungen betrachten die mit HTML5 eingef&uuml;hrt wurde.</p>
+        </div>
+
+            
+        <div class="textbox">
+            <h1>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Was ist HTML</h1>
+            <p>Dieses Kapitel besch&auml;ftigt sich mit den Grundlagen von HTML Dokumenten. Wir lernen hier was HTML ist sowie die Grundlegende Struktur jeder HTML Datei.</p>
+            <p>Sie sollten nach dem Durcharbeiten dieses Kapitel in der Lage sein eine einfache HTML Datei anzulegen.</p>
+            <p>HTML steht wie bereits angesprochen f&uuml;r Hypertext Markup Langue und ist eine Auszeichnungssprache.</p>
+            <p>Standard HTML Dateien haben die Dateiendung .htm oder .html, es gibt jedoch auch einigen Ausnahmen von dieser Konvention. HTML Dateien die PHP Abschnitte haben zum Beispiel die Endung .php</p>
+            <p>Wichtig sind diese Endungen f&uuml;r den Server, der anhand der Endungen den Webbrowser mitteilen kann, um welches MINE-Type (Multipurpose Internet Mail Extension) es sich bei der &uuml;bermittelten Datei handelt. Der Webbrowser kann dann anhand des &uuml;bermittelten MINE-Type die &uuml;bermittelte HTML Datei korrekt verarbeiten.</p>
+            <p>&bdquo;In Dokumenten werden in der Regel gleichartige Elemente wie zum Beispiel Titel, &Uuml;berschriften, Abs&auml;tze, Listen, Abbildungen, Tabellen und Verzeichnisse verwendet. Diese Elemente sollen konsequent &uuml;ber mehrere Dokumente hinweg in einheitlicher Form dargestellt werden.&ldquo; [FE10]</p>
+            <p>Die HTML Datei selbst enth&auml;lt den Inhalt sowie die Struktur eines Dokumentes, die Darstellung des Inhaltes kann zwar auch innerhalb der HTML Datei selber realisiert werden, h&auml;ufiger wird es aber in einer separaten CSS-Datei ausgelagert.</p>
+            <p>Damit gibt es eine Trennung zwischen dem Inhalt selbst und die Darstellung, dies ist notwendig da bei gr&ouml;&szlig;eren Webseiten mehrere HTML Dateien auf dieselbe CSS Datei f&uuml;r die Darstellung zur&uuml;ckgreifen kann. Das Design der Webseite kann somit auch zentral ge&auml;ndert und angepasst werden, dies ist nicht m&ouml;glich, wenn jeder HTML Datei selber f&uuml;r die Darstellung zust&auml;ndig ist.</p>
+            <p>In einer Webseite existieren neben der HTML und CSS Dokumentes auch noch weitere wichtige Dokumente, die f&uuml;r die Darstellung einer modernen Webseite unverzichtbar sind. Ein solches Dokument ist das Dokument, das die Skripten der Webseite beinhaltet, sofern diese nicht in der HTML Datei selbst vorhanden ist. Die Skripten, meist als JavaScript Dateien vorhanden, sind f&uuml;r die Interaktion mit dem Nutzer der Webseite zust&auml;ndig.</p>
+            <p>Es gibt auch dynamischen Webseiten die mittels PHP, kurz f&uuml;r Hypertext Preprocessor, dargestellt werden. Unteranwendung einer Datenbank, zum Beispiel mySQL, ist es dem Server damit m&ouml;glich je nach Aufrufer eine individuelle Webseite zu erstellen.</p>
+            <p>Wichtig ist hierbei jedoch, auch wenn es bei Verwendung von PHP keine eigentlich HTML-Datei mit einem Quellcode auf dem Server vorhanden ist, der Server muss dennoch eine dividuelle HTML Datei generieren und es dem Nutzer zusenden, ganz auf HTML kann man also auch hier nicht verzichten.</p>
+            <p>Diese sind jedoch nicht Gegenstand diese Ausarbeitung und werden daher nicht n&auml;her betrachtet.</p>
+            
+            <div class="textbox">
+            <h2>2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aufbau eines HTML Befehl</h2>
+            <p>HTML spezifiziert verschiedene Befehle, die von Webbrowser interpretiert werden kann. Diese Befehle werden auch HTML-Tags genannt und dienen dazu die Struktur des &uuml;berlieferten Dokuments zu formatieren.</p>
+            <p>HMTL Tag beginnen stets mit einen ''&lt;'' und enden mit einen ''&gt;'', zwischen den beiden Zeichen steht der auszuf&uuml;hrende Befehl. Die meisten HTML Befehlen m&uuml;ssen durch einen abschlie&szlig;enden HTML-End-Tag abgeschlossen werden, diese beginnt mit ''&lt;/&ldquo; und endet mit ''&gt;''.</p>
+            <p>Es existieren jedoch auch HTML-Tag die nicht abgeschlossen werden m&uuml;ssen wie z.B. &lt;br&gt;, &lt;hr&gt;, &lt;img&gt; usw. Diese HTML-Tag werden auch leere Elemente genannt, in Englischen Empty HTML Elements, da sie keine Inhalte beinhalten.</p>
+            </div>
+
+            <div class="textbox">
+            <h2>2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aufbau eines HTML Dokument</h2>
+            <p>Die Abb. 1 zeigt wie der Code einer einfachen HTML Datei aussehen kann. Das Dokument beginnt stets mit &lt;!DOCTYPE html&gt;, dieser teilt den verwendeten Webbrowser mit was f&uuml;r Befehle er zu verarbeiten hat.</p>
+            <p>DOCTYPE legt hier die Document Type Definition (DTD) das Dokument fest, diese definiert die Grammatik sowie der Syntax des Dokuments. Seit HTML5 wurde diese vereinheitlich zu ''html''.</p>
+            <p>Zuvor musste man f&uuml;r beispielweise HTML 4.0.1 Strict den DOCTYPE Tag wie folgt definieren:<br /> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</p>
+            <p>Der Tag DOCTYPE ist hierbei jedoch kein HTML Tag, diese muss daher auch nicht geschlossen werden.</p>
+
+            <h3>2.2.1&nbsp;&nbsp; Der HTML-Tag &lt;html&gt;</h3>
+            <p>Nach der DOCTYPE Deklaration wird der eigentlich HTML Code angegeben. Diese beginnt mit dem Tag &lt;html&gt;und endet mit dem Tag &lt;/html&gt;. Diese HTML Tag umschlie&szlig;en zwei Bl&ouml;cke des HTML Dokumentes.</p>
+
+            <h3>2.2.2&nbsp;&nbsp; Der HEAD-Block &lt;head&gt;</h3>
+            <p>Im HEAD Block werden Metainformationen &uuml;ber die Webseite gespeichert, diese Informationen geh&ouml;ren nicht zur eigentlichen Webseite und dienen lediglich dem Zweck Informationen anzugeben, die f&uuml;r den Betrachter der Webseite nicht direkt einzusehen sind.</p>
+            <p>Der Tag &lt;title&gt; bildet hier die Ausnahme, da diese in den meisten Webbrowser angezeigt werden. Dieser ist auch der einzige Tag, der verpflichtend in einen HTML Dokument vorkommen muss.</p>
+            <p>Im HEAD Block k&ouml;nnen auch Informationen f&uuml;r Suchmaschinen oder die verwendete Zeichenkodierung angegeben werden. H&auml;ufig wird auch die verwendete CSS-Datei f&uuml;r die Darstellung der Webseite im HEAD Block eines HTML Dokuments verlinkt.</p>
+
+            <h3>2.2.3&nbsp;&nbsp; Der BODY-Block &lt;body&gt;</h3>
+            <p>Im BODY Block wird der eigentliche Inhalt der Webseite sowie dessen Strukturierung gespeichert. Alles was in diesem Bereich erscheint, wird durch den Webbrowser gerendert und f&uuml;r uns sichtbar dargestellt.</p>
+            </div>
+
+            <div class="textbox">
+            <h2>2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Anlegen eines HTML Dokument</h2>
+            <p>Da HTML eine Auszeichnungssprache ist, ist die Erstellung eines HTML Dokument durch jeden Text-Editor, unter Windows kann man hier auch einfach den Standard Editor von Windows verwenden.</p>
+            <p>Zum Anlegen eines einfachen HTML Dokument kann der Quellcode in der Abb. 1 kopiert und in den Editor von Windows hinzugef&uuml;gt werden. Anschlie&szlig;end muss man noch die Datei als allgemeine Datei mit der Endung .htm oder .html speichern, die neu angelegte Datei kann von einem Webbrowser ge&ouml;ffnet und interpretiert werden.</p>
+            <p>Durch diese Einfachheit Webseite anlegen zu k&ouml;nnen, hat sich das HTML Format in den fr&uuml;hen Internet Zeiten als Standard im World Wide Web durchgesetzt.</p>
+            <p>Nat&uuml;rlich gibt es auch spezielle Tool f&uuml;r die Entwicklung einer Webseite, durch fr&uuml;hzeitige Erkennung von Syntaxfehler, automatisches hinzuf&uuml;gen von End-Tag oder durch Anzeigen von Verschachtelung-Ebenen erm&ouml;glich ein solches Tool umfangreichere HTML Dokumente schneller zu durchblicken.</p>
+            <p>Ein sehr empfehlenswertes Programm ist hier Brackets von der Firma Adobe, dieses Tool bietet unter andere eine Livevorschau der Webseite noch w&auml;hrend der Entwicklung des HTML Dokument, dies erm&ouml;glich es dem Entwickler seine sp&auml;tere Webseite noch w&auml;hrend der Entwicklungsphase zu betrachten.</p>
+            </div>
+
+            <h2>Zusammenfassung</h2>
+            <p>In diesem Kapitel haben wir den Grundlegende Aufbau eines HTML Dokument angesehen sowie wie man eine einfache HTML Datei anlegen kann. Hier haben wir definiert das HTML eine Auszeichnungssprache ist, die dazu verwendet werden kann um Inhalte Struktur zu verleihen. E</p>
+            <p>in HTML Dokument besteht aus einen HEAD sowie ein BODY Block. Im HEAD Block werden Metainformationen &uuml;ber das Dokument gespeichert und im BODY Block wird der eigentliche Inhalt einer Webseite und dessen Struktur gespeichert.</p>
+         
+            <h2><br clear="ALL" /> Aufgaben zur Selbst&uuml;berpr&uuml;fung</h2>
+            <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>2.1:</p>
+                                <p>Welche Verwendung hat der &lt;!DOCTYPE&gt; Tag am Anfang einer HTML Datei?</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>2.3:</p>
+                                <p>Geben Sie einen m&ouml;glich kurzen Quellcode zu einer HTML Seite an, die nur die HTML Konventionen erf&uuml;llen muss!</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 100%;" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>2.2:</p>
+                                <p>Antworten Sie kurz warum HTML keine Programmiersprache ist!</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="textbox">
+            <h1><br clear="ALL" /> 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grundlegende HTML Tag im HEAD Block einer HTML Datei</h1>
+            <p>In diesem Kapitel betrachten wir HTML Tags die im HEAD Block einer HTML Datei hinterlegt sind, diese Tags gibt Informationen zu der Webseite an die f&uuml;r den Nutzer selbst meist nicht von Bedeutung ist, da diese Informationen meist durch den Webbrowser nicht angezeigt werden, mit Ausnahme des Titel der Webseite.</p>
+        </div>
+        
+        <div class="textbox">
+            <h2><br clear="ALL" /> 3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Der &lt;title&gt; Tag &ndash; Der Name einer Webseite</h2>
+            <p>Der &lt;title&gt;&lt;/title&gt; gibt der Name der Webseite an, die Aufgabe dieses HTML Tag ist es der Name der Seite anzugeben, wenn der Browser die Webseite aufruft, den Name der Webseite wird hierbei im Browser Kopf dargestellt.</p>
+            <p>Wenn Sie eine Webseite als Favorit speichern m&ouml;chte, ist der Name der im &lt;title&gt;&lt;/title&gt; enthalten ist, auch als Standard Name vorgeschlagen.</p>
+            <p>Eine wesentliche Aufgabe des &lt;title&gt;&lt;/title&gt; Tag ist es auch f&uuml;r Suchmaschinen wie Google den Titel eine Seite anzuzeigen, dieser Titel wird dann meisten auch als Titel der Webseite in den Suchergebnissen zu den betroffenen Seiten angezeigt.</p>               
+        </div>
+        
+        <div class="textbox">
+            <h2>3.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Der &lt;meta&gt; Tag &ndash; Unsichtbare Daten f&uuml;r den Webbrowser/die Suchmaschine</h2>
+            <p>Der Metainformationen sind Daten &uuml;ber Daten, die Informationen, die im leeren HTML Meta-Tag enthalten sind beschreibt das aktuelle HTML Dokument. Diese Informationen werden selber nicht auf der Webseite angezeigt, Sie sind aber f&uuml;r den Webbrowser oder Suchmaschinen lesbar. Die im Meta-Tag enthaltenen Informationen beschreiben oft die Sprache, den Autor oder die letzte &Auml;nderung einer Webseite.</p>
+            <p>Wir betrachten hier einige wichtige Meta-Tag eines HTML Dokumentes.</p>
+        </div>
+        
+        <div class="textbox">
+            <h3>3.2.1&nbsp;&nbsp; Charset &ndash; Die Zeichenkodierung einer Webseite</h3>
+            <p>Die Angabe der Zeichenkodierung mit zum Beispiel &lt;meta charset= ''UTF-8'' /&gt; stellt gibt den Webbrowser die Anweisung die Seite in UTF-8 Zeichen zu kodieren. Dies ist notwendig, wenn der verwendete Server, auf dem die Webseite l&auml;uft standardm&auml;&szlig;ig mit einer anderer Zeichenkodierung arbeitet. Hiermit stellt man sicher das die Darstellung der Webseite in allen Bedingungen in richtigem Format erfolgt.</p>
+        </div>
+        
+        <div class="textbox">
+            <h3>3.2.2&nbsp;&nbsp; Name/Content &ndash; Wertepaare im Meta Tag</h3>
+            <p>Der Name/Content Tag im Meta-Tag ist ein Wertepaar, wo bei ersteres der Name angibt und letzteres den Inhalt. Diese Informationen legen immer als Paar vor und dienen meisten dazu Suchmaschinen anzusprechen. Hier k&ouml;nnen n&auml;here Informationen zu einer Webseite hinterlegt werden wie, Sprache, Auto usw.</p>
+        </div>
+        
+        <div class="textbox">
+            <h2>3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; refresh &ndash; Seite neu laden oder Weiterleiten</h2>
+            <p>Mit dem Meta Tag &lt;meta http-equiv=''refresh'' content=''10;url=https://www.google.de/''&gt; kann eine automatische Weiterleitung auf die angegebene URL nach 10 Sekunden erfolgen. Wenn man auf die Angabe der URL verzichtet wird die Webseite automatisch neugeladen nach 10 Sekunden.</p>
+        </div>
+        
+        <div class="textbox">
+            <h2>3.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set-cookie &ndash; Cookie ohne JavaScript</h2>
+            <p>Es ist m&ouml;glich Cookie zu setzen ganz ohne JavaScript anwenden zu m&uuml;ssen.</p>
+            <p>Der Beispiel Code daf&uuml;r seht wie folgt aus:<br /> &lt;meta http-equiv="set-cookie" content="Name=Hoang Minh; expires=Thursday, 05-December-19"&gt;</p>
+            <p>Das Verwalten von Cookies wird dennoch meisten von JavaScript &uuml;bernommen, da diese flexiblere Einsatzm&ouml;glichkeiten f&uuml;r Cookies bieten.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="textbox">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br/> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <br/>sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br/> no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <br/>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At vero eos et accusam et justo duo dolores et ea rebum. <br/>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+    </div>
+    <div class="footer-container">
+        <ul id="footer">
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="Impressum.html">Impressum</a></li>
+        </ul>
+    </div>
+<script src="cookie.js"></script>
+</body>
+</html>

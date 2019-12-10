@@ -36,6 +36,17 @@
  box-shadow: 0px 0px 1px #777;
 }
 
+a:link, a:visited
+{
+color: white;
+}
+
+
+a:active, a:hover
+{
+color:blue;
+}
+
 body{
   background-color: #36393f;
   color: white;
@@ -129,6 +140,36 @@ body{
   margin: 1em 0;
 }
 
+/*-----------------für WEB Grundlagen & NodeJS------------------*/
+.definition {
+	background-color: orange;
+	border-color: red;
+	color: black;
+	padding: 0.5% 1% 1% 1%
+}
+
+.definitionHeading {
+	color: red;
+}
+
+.abbildung {
+	font-style: italic;
+}
+
+.bild {
+	width: 100%;
+	height: auto;
+}
+
+.rot {
+	color: red;
+}
+
+.textCode {
+	font-family: "Courier New", Courier, monospace;
+}
+/*--------------------------------------------------------------*/
+
 .footer-container {
   width: 100%;
   height: 30px;
@@ -184,8 +225,9 @@ body{
   margin: 3px 0 0;
 }
 
-span {
+#info {
     font-weight: bold;
+    color: aliceblue;
 }
 
 /*below 768px*/
