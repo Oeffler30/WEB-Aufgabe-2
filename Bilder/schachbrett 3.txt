@@ -1,0 +1,23 @@
+function addZug(xNeu,yNeu,weiss,zuege) {
+	
+	// Zielfeld ist ungueltig:
+	if ((xNeu<1)||(xNeu>8)||(yNeu<1)||(yNeu>8))
+		return false;
+
+	var figur = getFigur(xNeu,yNeu);
+
+		if (figur != null) {
+
+		// Zielfeld ist mit einer Figur belegt
+			if (weiss == figur.istWeiss) {
+
+				// Zielfeld ist mit eigener Figur belegt
+				return false;
+			}
+		}
+
+	zuege.push(''+xNeu+'-'+yNeu);
+
+	return true;
+
+}

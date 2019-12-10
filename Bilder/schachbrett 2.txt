@@ -1,0 +1,13 @@
+var zuege=getErlaubteZuegeOhneSchach(7,1);
+document.write("Zuege: "+zuege+"<br/>");
+
+
+function getErlaubteZuegeOhneSchach(x,y) {
+	var zuege=[];
+	figur=getFigur(x,y);
+
+	if (figur.typ=='S')
+		zuege = getErlaubteZuegeSpringerOhneSchach(x,y,figur.farbe);
+	[...]
+	return zuege;
+}

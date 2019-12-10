@@ -1,0 +1,16 @@
+for(var j=8; j>=1; j--) {
+    for(var i=1; i<=8; i++) {
+        if(((i%2!=0) && (j%2==0))||((i%2==0) && (j%2!=0)))
+	    content += "<td style='background:"+brettFeldHell+";'>";
+	else
+	    content += "<td style='background:"+brettFeldDunkel+";'>";
+    }
+}
+
+
+
+
+
+
+
+
