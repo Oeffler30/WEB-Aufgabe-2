@@ -157,6 +157,16 @@ body{
 .textCode {
 	font-family: "Courier New", Courier, monospace;
 }
+
+.liste {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.nodeBild {
+	width: 60%;
+	height: auto;
+}
 /*--------------------------------------------------------------*/
 
 .footer-container {
