@@ -129,6 +129,7 @@ body{
   margin: 1em 0;
 }
 
+/*-----------------für WEB Grundlagen & NodeJS------------------*/
 .definition {
 	background-color: orange;
 	border-color: red;
@@ -148,6 +149,15 @@ body{
 	width: 100%;
 	height: auto;
 }
+
+.rot {
+	color: red;
+}
+
+.textCode {
+	font-family: "Courier New", Courier, monospace;
+}
+/*--------------------------------------------------------------*/
 
 .footer-container {
   width: 100%;
