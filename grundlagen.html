@@ -19,8 +19,7 @@
             <a href="datenschutz.html" title="View our Cookie Policy">Finde mehr heraus über Cookies und Datenschutz</a>
         </p>
         <form>
-            <input id="knopf" type="button" value="Nicht Einverstanden" onclick="hide()">
-            <input id="knopf" type="button" value="Einverstanden" onclick="acceptCookie()">
+            <input id="knopf" type="button" value="Zur Kenntnis genommen" onclick="hide()">
         </form>
     </div>
         <div id="header-image"></div>
@@ -32,7 +31,6 @@
                   <li><a href="html5.html">HTML</a></li>
                   <li><a href="css3.html">CSS</a></li>
                   <li><a href="javascript.html">Javascript</a></li>
-                  <li><a href="javascript2.html">Javascript (2)</a></li>
                   <li><a href="jsp_servlets_jaxb.html">JSP, Servlets, JAXB</a></li>
                   <li><a href="php.html">PHP</a></li>
                   <li><a href="nodejs.html">NodeJS</a></li>
@@ -47,9 +45,68 @@
     </div>
     <div class="content-container">
         <h1>Grundlagen</h1>
-
+	<div class="textbox">
+		<div class="liste">
+			<ul style="list-style-type:none">
+				<li><a style="color:white" href="#ip+ports+sockets">1. IP-Adressen, TCP-Ports, Sockets</a></li>
+			</ul>
+			<div class="liste">
+				<ul style="list-style-type:none">
+					<li><a style="color:white" href="#ip">1.1 IP-Adressen</a></li>
+					<li><a style="color:white" href="#ports">1.2 TCP-Ports</a></li>
+					<li><a style="color:white" href="#sockets">1.3 Sockets</a></li>
+					<li><a style="color:white" href="#ipzsm">1.4 Zusammenfassung</a><li>
+				</ul>
+			</div>
+			<ul style="list-style-type:none">
+				<li><a style="color:white" href="#uri+url+urn">2. URI, URL, URN</a></li>
+			</ul>
+			<div class="liste">
+				<ul style="list-style-type:none">
+					<li><a style="color:white" href="#uri">2.1 URI</a></li>
+					<li><a style="color:white" href="#url">2.2 URL</a></li>
+					<li><a style="color:white" href="#urn">2.3 URN</a></li>
+					<li><a style="color:white" href="#urizsm">2.4 Zusammenfassung</a><li>
+				</ul>
+			</div>
+			<ul style="list-style-type:none">
+				<li><a style="color:white" href="#kommunikation">3. Kommunikation über HTTP</a></li>
+			</ul>
+			<div class="liste">
+				<ul style="list-style-type:none">
+					<li><a style="color:white" href="#client+server">3.1 Client - Server - Kommunikation</a></li>
+					<li><a style="color:white" href="#statuscodes">3.2 HTTP-Statuscodes</a></li>
+					<li><a style="color:white" href="#methoden">3.3 HTTP-Methoden</a></li>
+					<li><a style="color:white" href="#sessions">3.4 Notwendigkeit von Sessions</a><li>
+					<li><a style="color:white" href="#httpzsm">3.5 Zusammenfassung</a><li>
+				</ul>
+			</div>
+			<ul style="list-style-type:none">
+				<li><a style="color:white" href="#html+xml+json">4. HTML, XML und JSON</a></li>
+			</ul>
+			<div class="liste">
+				<ul style="list-style-type:none">
+					<li><a style="color:white" href="#html">4.1 HTML</a></li>
+					<li><a style="color:white" href="#xml+schema">4.2 XML</a></li>
+				</ul>
+				<div class="liste">
+					<ul style="list-style-type:none">
+						<li><a style="color:white" href="#schema">4.2.1 XML und XML-Schema</a></li>
+						<li><a style="color:white" href="#xml">4.2.2 XML</a></li>
+					</ul>
+				</div>
+				<ul style="list-style-type:none">
+					<li><a style="color:white" href="#json">4.3 JSON</a></li>
+					<li><a style="color:white" href="#datazsm">4.4 Zusammenfassung</a><li>
+				</ul>
+			</div>
+			<ul style="list-style-type:none">
+				<li><a style="color:white" href="#literatur">Literaturverzeichnis</a></li>
+			</ul>
+		</div>
+	</div>
         <div class="textbox">
-	    <h1>1. IP-Adressen, TCP-Ports, Sockets</h1>
+	    <h1 id="ip+ports+sockets">1. IP-Adressen, TCP-Ports, Sockets</h1>
             <p>In diesem Kapitel werde dem Leser die grundlegenden Bedeutungen von IP-Adressen, TCP-Ports und Netzwerk-Sockets bei der Kommunikation von Geräten in einem Computernetzwerk nähergebracht. Es wird dabei zuerst auf die Bedeutung der IP-Adressen in der alltäglichen Welt, sowie die grundlegende Eigenschaft der Eindeutigkeit eingegangen. Daraufhin wird unter Verwendung einer Analogie der grundlegende Ablauf einer Datenübertragung über ein Computernetzwerk beschrieben.
 	       <br><br>Leser sollten nach Durcharbeiten dieses Kapitels in der Lage sein:<br><br>
 	       <div class="liste">
@@ -62,7 +119,7 @@
 	    </p>
         </div>
         <div class="textbox">
-	    <h2>1.1 IP-Adressen</h2>
+	    <h2 id="ip">1.1 IP-Adressen</h2>
             <p>Ein Begriff, der bezüglich der Thematik Netzwerkkommunikation oft genannt wird, ist der der „IP-Adresse“. Selbst weniger bewanderte Menschen haben mit Sicherheit davon gehört. Oft wird in den Nachrichten von einem Hacker-Angriff berichtet, bei dem die Adressen den Angreifern anscheinend die Tore in die Rechner der betroffenen Unternehmen, Bundesbehörden oder sonstigen Nutzer öffneten. Je nachdem welche Angriffstaktik genau genutzt wurde, ist diese natürlich mehr oder weniger schwierig, aber für viele Laien ist es trotzdem oft die IP-Adresse, die ihnen im Gedächtnis hängen bleibt.</p>
         </div>
         <div class="textbox">
@@ -79,7 +136,7 @@
             <p>Hat der Postbote das richtige Haus gefunden, um das Paket abzuliefern, ist seine Aufgabe erfüllt. Auch in der Realität endet der Aufgabenbereich des IP-Protokolls hier. Es ist im bekannten TCP/IP Schichtenmodell auf der Internetschicht eingeordnet, was bedeutet, dass es sich nur um die Zustellung der Datenpakete innerhalb des Netzwerks kümmert.</p>
         </div>
 	 <div class="textbox">
-	    <h2>1.2 TCP-Ports</h2>
+	    <h2 id="ports">1.2 TCP-Ports</h2>
             <p>Allerdings ist das Paket damit noch nicht an seinem eigentlichen Zielort angekommen. Dem Postboten wurde das Paket an der Tür des richtigen Hauses abgenommen. Das Haus, an das das Paket adressiert ist, ist in dem Beispiel eine große Villa, in der eine reiche Familie lebt. Eine solche reiche Familie beschäftigt eine große Anzahl an Dienstpersonal, das verschiedenen Aufgaben nachgeht. Ein dazugehörendes Dienstmädchen hat dem Postboten das Paket abgenommen. Ihre Aufgabe ist es nun, das Zimmer des konkreten Familienmitglieds, an das das Paket adressiert ist, zu finden und der Person das Paket zu bringen. Dazu ist sie in der Lage, weil sie die Namen der Bewohner des Hauses kennt. Der Postbote (das IP-Protokoll) kannte nur die Adresse des Hauses (des Netzwerkgeräts) in der Ortschaft (dem Netzwerk). Das Dienstmädchen kann anhand des Namens, der auf das Paket gedruckt ist, feststellen zu welchem Zimmer sie gehen muss, um das Paket an sein Ziel zu bringen. Ähnlich funktioniert es im Computernetzwerk, in welchem die Datenanfrage (welche das Paket darstellt) von einem bestimmten Anwendungsprogramm geschickt wurde. Das Anwendungsprogramm ist im Beispiel das Familienmitglied, das die Bestellung aufgegeben hat. Um allerdings die Daten zustellen zu können, muss es eine zentrale Stelle geben, über die dieses Anwendungsprogramm erreichbar ist, sodass Daten zugestellt werden können. Diese Zugangstelle ist ein sogenannter TCP-Port.</p>
         </div>
 	 <div class="definition">
@@ -90,7 +147,7 @@
             <p>Ein Netzwerkgerät verfügt über 65535 dieser Ports, von denen die ersten 1024 (also Ports 0 bis 1023) für bestimmte Netzwerkdienste reserviert sind. Über das TCP-Protokoll werden ebendiese Ports adressiert, hinter welchen sich dann das Anwendungsprogramm befindet, das die Daten angefordert hatte. In der Analogie ist dies das Familienmitglied, welches seine Bestellung nun entgegennehmen kann.</p>
         </div>
  	<div class="textbox">
-	    <h2>1.3 Sockets</h2>
+	    <h2 id="sockets">1.3 Sockets</h2>
             <p>In der Realität werden diese beiden Informationen in Form eines Sockets zusammengefasst. Da sich dieses Konzept schon auf einer etwas höheren Abstraktionsebene befindet, passt es nicht mehr so gut in die Analogie mit der Straße, dem Wohnhaus und dem Paketboten. Am ehesten ist das Socket an der Stelle des Dienstmädchens einzuordnen, da dieses sowohl die IP-Adresse als auch die Portnummer kennt, an die das Paket zugestellt ist. Genaugenommen ist das Socket selbst allerdings weniger greifbar als die Teile, aus denen es besteht. Es stellt die Verbindung zwischen IP-Adresse und Port dar, und damit den eigentlichen Endpunkt einer jeden Netzwerkkommunikation.</p>
         </div>
 	<div class="definition">
@@ -116,11 +173,11 @@ in die Adressleiste eines beliebigen Internetbrowsers eingegeben, gelangt man al
             <p>Abbildung 1.3.2 zeigt, dass dem so ist. Die Gesamtheit von IP-Adresse und Portnummer stellt schließlich das Socket dar, und damit letztendlich das, was an den beiden Enden einer Netzwerkverbindung steht. Es ist auch möglich, dass ein Client mehrere Verbindungen zu ein und demselben Server aufbaut. Dies kann beispielswese geschehen, wenn ein Anwendungsprogramm mehrere Dateien parallel übertragen möchte, etwa beim Download. Um dies zu ermöglichen werden ihm weitere Ports zur Verfügung gestellt, von denen aus es die notwendigen Verbindungen zum Server aufbaut. Die resultierenden Sockets auf dem Client unterscheiden sich demzufolge nur in ihren Portnummern, nicht aber in ihren IP-Adressen.</p>
         </div>
 	<div class="textbox">
-	    <h2>1.4 Zusammenfassung</h2>
+	    <h2 id="ipzsm">1.4 Zusammenfassung</h2>
             <p>In diesem Kapitel der grundlegende Ablauf einer Kommunikation zweier Netzwerkgeräte mittels der Protokolle IP und TCP erklärt. Im Zuge dessen wurden die Begriffe und Bedeutungen von IP-Adresse, TCP-Port und Socket dem Leser anhand einer Analogie und eines konkreten Beispiels näher gebracht.</p>
         </div>
  	<div class="textbox">
-	    <h1>2. URL, URI, URN</h1>
+	    <h1 id="uri+url+urn">2. URL, URI, URN</h1>
             <p>Mit den in Kapitel 1 beschriebenen Verfahrensweisen ist es möglich eine Verbindung zu einem anderen Netzwerkgerät aufzubauen. Um jedoch alltägliche Aktionen im Internet ausführen zu können, ist es nicht nur nötig, andere Netzwerkteilnehmer anzusprechen, sondern spezielle Ressourcen mit diesen auszutauschen. Der Begriff „Ressource“ kann hierbei laut Spezifikation eine Vielzahl verschiedener Dateien oder Informationen bezeichnen, beispielsweise ein „elektronisches Dokument, ein Bild, eine Informationsquelle mit einheitlichem Zweck (zum Beispiel „der heutige Wetterbericht für Los Angeles“), eine Dienstleistung (zum Beispiel Gateway zwischen den Protokollen HTTP und SMS) oder eine Ansammlung anderer Ressourcen“ [BFM01 S. 5]. Weiterhin nennt die Spezifikation auch die Möglichkeit, dass Menschen, reale Objekte, wie zum Beispiel Bücher in einer Bibliothek, oder auch abstrakte Konzepte Ressourcen darstellen können, vgl. [BFM01 S. 5]. Im Kontext der Client-Server Kommunikation ist es allerdings sinnvoll, sich bei Verwendung des Begriffs nur auf die in digitalem Format vorliegenden Dateien und Informationen konzentrieren, also HTML-Dateien, Bilder, und ähnliches.</p>
         </div>
 	<div class="textbox">
@@ -136,7 +193,7 @@ Der Leser sollte nach Durcharbeiten dieses Kapitels in der Lage sein:<br><br>
 	</p>
         </div>
  	<div class="textbox">
-	    <h2>2.1 URI</h2>
+	    <h2 id="uri">2.1 URI</h2>
             <p>Damit ein Netzwerkteilnehmer auf eine ebensolche Ressource über das Netzwerk zugreifen kann, müssen die Möglichkeit bestehen, sie eindeutig zu identifizieren. Um dies zu gewährleisten, verfügt jede Ressource über einen Identifikator, einen Uniform Resource Identifier (URI).</p>
         </div>
 	<div class="definition">
@@ -175,7 +232,7 @@ Die große Anzahl von verschiedenen Bestandteilen mag auf den unerfahrenen Leser
             <p>In Abbildung 2.1.2 ist die URI einer im Browser geöffneten HTML-Datei zu sehen. Das dabei verwendete Schema ist file, der Pfad der URI ist /D:/HS Mannheim/3. Semester/WEB/Diverses/datei.html. Durch das Vorhandensein dieser beiden Komponenten ist die URI gültig. Allerdings illustriert dieses Beispiel auch die vom Schema abhängigen Restriktionen bezüglich der Gültigkeitsregeln einer URI. Denn das Schema file erlaubt eine leere Autorität, da es in diesem Fall davon ausgeht, dass sich der Pfad auf das Dateisystem des lokalen Rechners bezieht. Soll auf eine Ressource auf einem anderen Netzwerkgerät zugegriffen werden, muss der entsprechende Hostname im Autoritätsteil angegeben werden. Andere Schemen, wie beispielsweise HTTP erlauben allerdings keine leere Autorität.</p>
         </div>
 	<div class="textbox">
-	    <h2>2.2 URL</h2>
+	    <h2 id="url">2.2 URL</h2>
             <p>Die am weitesten verbreitete Form solcher URIs sind die URLs, die Uniform Resource Locators. Betrachtet man eine Bibliothek als Analogie zum Internet, ist die URL vergleichbar mit dem Standort des Buches in der Bibliothek. Mit ihr können Ressourcen, beispielsweise HTML-Dateien, eindeutig in einem Netzwerk lokalisiert werden. Da die URL eine Art Unterform, beziehungsweise konkretere Form der URI ist, muss ihr Aufbau dem ebendieser entsprechen.</p>
         </div>
  	<div class="definition">
@@ -189,7 +246,7 @@ genauer betrachtet. Hierbei wird der Netzwerkteilnehmer mit dem Namen de.wikiped
 </p>
         </div>
 	<div class="textbox">
-	    <h2>2.3 URN</h2>
+	    <h2 id="urn">2.3 URN</h2>
         </div>
 	<div class="definition">
 	    <h4 class="definitionHeading">Definition 2.3.1: </h4><h4>URN</h4>
@@ -210,11 +267,11 @@ Hier ist nach dem Schema der erste angegebene Namensraum ISBN. Innerhalb dieses 
 </p>
         </div>
 	<div class="textbox">
-	    <h2>2.4 Zusammenfassung</h2>
+	    <h2 id="urizsm">2.4 Zusammenfassung</h2>
             <p>Dieses Kapitel hat Möglichkeiten zur Identifikation einer Ressource in einem Computernetzwerk dargestellt. Genau beschrieben wurde dabei der Aufbau von URIs, sowie die Bedeutung und Funktionsweise von URL und URN als spezielle Formen der URI. Es wurden Beispiele zur Illustration ebendieser Funktionsweisen dargebracht.</p>
         </div>
 	<div class="textbox">
-	    <h1>3. Kommunikation über HTTP</h1>
+	    <h1 id="kommunikation">3. Kommunikation über HTTP</h1>
             <p>In Kapitel 1 wurde genauer dargestellt, wie Verbindungen auf Netzwerkebene zustande kommen. Kapitel 2 hat den Fokus darauf gerichtet, wie spezifische Ressourcen in einem Netzwerk identifiziert werden können. Um nun alltägliche Transaktionen im Internet vollziehen zu können, müssen die Daten auf eine Art und Weise übertragen werden, die es jedem Kommunikationspartner ermöglicht, sie zu interpretieren und gegebenenfalls passende Antworten zu versenden. Genau an dieser Stelle kommen die Anwendungsschicht und das Protokoll HTTP ins Spiel. Es dient nicht einfach nur zur Kommunikation von zwei Netzwerkgeräten, sondern speziell der eines Clients mit einem Server. Genauso wie bei der Kommunikation über IP und TCP müssen auch zur Übermittlung mittels HTTP die Daten zuerst mit einem entsprechenden Header versehen werden. Da die Anwendungsschicht die oberste Schicht des TCP/IP-Modells ist, und damit beim Absenden einer Anfrage als erstes „durchlaufen“ wird, ist der HTTP-Header der erste, in den die Daten verpackt werden. Ihm folgen der TCP- und der IP-Header. An unterster Stelle folgt schließlich noch der Header eines Protokolls der Netzzugangsschicht, meistens Ethernet. Der HTTP-Header enthält mehrere Header-Felder, welche sowohl die im „Body“ übermittelten Daten in Art und Umfang beschreiben als auch Informationen über den Absender des Datenpakets enthalten.</p>
         </div>
 	<div class="textbox">
@@ -231,7 +288,7 @@ Nach Durcharbeiten dieses Kapitels sollte der Leser in der Lage sein:<br><br>
 	</p>
         </div>
 	<div class="textbox">
-	    <h2>3.1 Client – Server – Kommunikation</h2>
+	    <h2 id="client+server">3.1 Client – Server – Kommunikation</h2>
             <p>An einer Kommunikation sind im Normalfall zwei Teilnehmer beteiligt. Der Client ist derjenige Netzwerkteilnehmer, der die Verbindung initiiert und eine Ressource anfordert. Wenn man über HTTP spricht, bewegt man sich auf der Anwendungsebene des TCP/IP-Modells. Aus diesem Grund sind es hier Anwendungsprogramme, die Nachrichten austauschen, konkret ein Internetbrowser als Client und eine andere Software als Server. Der Server ist der Dienstleister, der die Ressourcen zur Verfügung stellt. Möchte ein Client eine Verbindung initiieren, schickt er zu allererst einen Request, also eine Anfrage für eine Ressource an den Server.</p>
         </div>
 	<div class="definition">
@@ -281,7 +338,7 @@ Unter dem Response-Header in Abbildung 3.1.2 sind auch noch die im Body der Nach
 </p>
         </div>
 	<div class="textbox">
-	    <h2>3.2 HTTP-Statuscodes</h2>
+	    <h2 id="statuscodes">3.2 HTTP-Statuscodes</h2>
             <p>Die erste Zeile eines HTTP-Headers ist in jedem Fall eine der ausschlaggebendsten. In ihr wird der HTTP-Statuscode übermittelt. Dieser gibt Auskunft über den Ausgang der Anfrage des Clients. Im Beispiel in Abbildung 3.1.2 schickt der Server den Code 200 zurück, dem der Ausdruck OK entspricht. Die GET-Anfrage des Clients ist also erfolgreich bearbeitet worden, und die angefragte Ressource ist im Body der Antwort enthalten.</p>
         </div>
 	<div class="textbox">
@@ -312,7 +369,7 @@ Unter dem Response-Header in Abbildung 3.1.2 sind auch noch die im Body der Nach
             <p>Die letzte Gruppe von Statuscodes ist schließlich die Gruppe 5xx, die aussagt, dass ein serverseitiger Fehler aufgetreten ist. Dabei ist Code 500 wohl einer der wichtigsten. Er gibt an, dass ein interner Fehler den Server davon abhält, die Anfrage korrekt zu bearbeiten. Weitere Codes aus diesem Bereich sind beispielsweise 501, welcher angibt, dass die benutzte HTTP-Methode nicht vom Server behandelt werden kann, und 503, der bei Überlastung des Servers oder während Wartungsarbeiten zurückgegeben wird.</p>
         </div>
 	<div class="textbox">
-	    <h2>3.3 HTTP-Methoden</h2>
+	    <h2 id="methoden">3.3 HTTP-Methoden</h2>
             <p>Es gibt verschiedene Arten von Anfragen, die ein Client an einen Server stellen kann. Sie unterscheiden sich darin, welche Aktion der Client mit der angefragten Ressource durchführen möchte. Ausschlaggebend sind hierbei die sogenannten HTTP-Methoden, mit denen nicht nur eine Ressource selbst, sondern auch eine bestimmte Aktion, die der Client auf der Ressource oder in Bezug zum Server ausführen möchte, definiert wird.</p>
         </div>
 	<div class="textbox">
@@ -365,7 +422,7 @@ Unter dem Response-Header in Abbildung 3.1.2 sind auch noch die im Body der Nach
             <p>TLS ist ein auf der Transportschicht des TCP/IP-Modells eingeordnetes Protokoll, das zur Verschlüsselung der Kommunikation zwischen Client und Server dient. Speziell sorgt es dafür, dass die Daten weder von Dritten mitgeschnitten noch verändert werden können, sondern nur von Client und Server entschlüsselt werden können. Der Aufruf der CONNECT-Methode richtet sich an ebendiesen Proxy-Server, wobei der Name des eigentlichen Ziel-Servers, zu dem der Client eine Verbindung aufbauen möchte, im Feld request-target des CONNECT-Headers übermittelt wird.</p>
         </div>
 	<div class="textbox">
-	    <h2>3.4 Notwendigkeit von Sessions</h2>
+	    <h2 id="sessions">3.4 Notwendigkeit von Sessions</h2>
             <p>Ein Problem, das beim Umgang mit HTTP auftritt, ist die Zustandslosigkeit dieses Protokolls. Nachdem der Server die Anfrage eines Clients bearbeitet hat, geht jegliche Beziehung zwischen den beiden verloren. Der Server „vergisst“ den Client also direkt nach dem Übersenden der Antwort. Dies stellt spätestens dann ein Problem dar, wenn man sich in einen Benutzeraccount auf einer Webseite einloggen möchte, da der Server eben immer nur die momentane Anfrage eines Clients beantworten kann. In einem Online-Shop wäre es somit beispielsweise unmöglich, Warenkörbe zu realisieren, in denen im Laufe einer Sitzung des Clients verschiedene Daten gespeichert werden müssen. Um dieses Problem zu lösen, wurde versucht, ebendiese Sitzungen trotz der Einschränkungen von HTTP zu realisieren</p>
         </div>
 	<div class="definition">
@@ -382,11 +439,11 @@ Unter dem Response-Header in Abbildung 3.1.2 sind auch noch die im Body der Nach
             <p>In Abbildung 3.4.1 werden im Feld Cookie alle vom Server gesetzten Cookies mit ihren jeweiligen Werten hintereinander gereiht angezeigt. Darunter finden sich mehrere Cookie pair Felder, in welchen die einzelnen Cookies separat aufgelistet werden. Aus Gründen der Leserlichkeit zeigt der Screenshot nur diese Felder. Wie man sieht, werden auch Cookies gespeichert, die Auskunft über andere Eigenschaften des Clients geben, wie beispielsweise has_js, welcher angibt, ob der Client JavaScript unterstützt. Der Session-Cookie im Falle des Beispiels in Abbildung 3.4.1 trägt den Namen incap_ses_449_818693. Die Session-ID folgt in Form einer langen Zeichenkette dem Gleichheitszeichen. Somit kann der Server Zugriffsprivilegien auf Ressourcen von verschiedenen Clients regeln. Beendet der Client seine Sitzung, was je nach vorgenommenen Einstellungen beim Schließen des Browsers oder etwa beim Logout passiert, löscht der Server den Session-Cookie indem er in der Response ein in der Vergangenheit liegendes Ablaufdatum für den Cookie festlegt. Wie man jedoch in Abbildung 3.4.1 ebenfalls erkennen kann, werden die Cookie-Daten unverschlüsselt und im Klartext übertragen. Schafft es ein Angreifer also, die Session-ID eines nichtsahnenden Nutzers auszulesen, kann er damit dem Server vorgaukeln, ebendieser Nutzer zu sein und beispielsweise auf Accountdaten dessen zugreifen, oder in seinem Namen Käufe tätigen. Diese Vorgehensweise wird als Session-Hijacking bezeichnet. Ähnlich wie bei der Datenübertragung mit der POST-Methode ist es also auch hier wichtig darauf zu achten, dass man sensible Daten nicht auf Kommunikationswegen übermittelt, die nicht wenigstens mit HTTPS gesichert sind.</p>
         </div>
 	<div class="textbox">
-	    <h2>3.5 Zusammenfassung</h2>
+	    <h2 id="httpzsm">3.5 Zusammenfassung</h2>
             <p>In diesem Kapitel wurde die Kommunikation von Client und Server über HTTP genauer betrachtet. Die Begriffe Request und Response wurden als Hauptbestandteile ebendieser definiert und anhand von konkreten Beispielen erläutert. Des Weiteren lag der Fokus auf den Statuscodes, die mit jeder HTTP-Response vom Server übermittelt werden. Dabei wurden die Code-Gruppen, sowie die wichtigsten Vertreter dieser benannt. Weiterhin hat das Kapitel die verschiedenen HTTP-Methoden sowie ihre Anwendungsbereiche thematisiert. Das letzte Teilkapitel hat sich schließlich mit dem Umstand der Zustandslosigkeit von HTTP und der daraus resultierenden Bedeutung von Sessions beschäftigt.</p>
         </div>
 	<div class="textbox">
-	    <h1>4. HTML, XML und JSON</h1>
+	    <h1 id="html+xml+json">4. HTML, XML und JSON</h1>
             <p>In den ersten drei Kapiteln wurde beschrieben, wie die Verbindung zwischen Client und Server zustande kommt, und was zwischen den beiden passiert, wenn eine Ressource abgerufen wird. Noch nicht geklärt ist jedoch die Frage, wie genau eine Ressource aufgebaut ist beziehungsweise was für Daten der Server in der Antwort an den Client zurückschickt.</p>
         </div>
 	<div class="textbox">
@@ -406,7 +463,7 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
 	</p>
         </div>
 	<div class="textbox">
-	    <h2>4.1 HTML</h2>
+	    <h2 id="html">4.1 HTML</h2>
             <p>Die wohl am weitesten verbreitete Anwendung von SGML ist die Auszeichnungssprache Hypertext Markup Language (HTML). Das bedeutet, dass alle Versionen von HTML, die vor Version 4.0 veröffentlicht wurden, auf Grundlage von SGML spezifiziert wurden. HTML selbst wird genutzt, um den Inhalt und die grundlegende Darstellung von Webseiten zu beschreiben. Um dies zu erreichen, bedient sich HTML sogenannter Tags, welche die Elemente des Texts einschließen, der später vom Browser auf bestimmte Art und Weise dargestellt werden soll.</p>
         </div>
 	<div class="textbox">
@@ -431,7 +488,7 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
             <p>Unschwer zu erkennen ist, dass sich das Bild unter einem anderen Pfad als die HTML-Datei selbst befindet. Auch der Browser erkennt dies, da er den Quelltext der Seite während des Ladens kontinuierlich analysiert. Stößt er bei diesem Vorgang auf einen solchen Link, veranlasst er eine neue GET-Anfrage, mit der die verlinkte Ressource unter dem angegebenen Pfad vom Server angefordert wird. Ebendiese Anfrage ist in der unteren Hälfte von Abbildung 4.1.2 sichtbar. Ähnlich wie Bilder werden auch CSS-Dateien, die zur Formatierung der einzelnen Elemente der HTML-Seite dienen, erst geladen, wenn der Browser die Datei am Zielpfad komplett geladen hat. Heutzutage ist dieses Nachladen von einzelnen Elementen einer Webseite aufgrund der hohen Übertragungsgeschwindigkeiten kaum noch bemerkbar. Ist man aber beispielsweise aufgrund von Netzwerküberlastungen einer langsameren Internetverbindung ausgesetzt, ist es nicht selten zu sehen, wie sich die Internetseite Stück für Stück „aufbaut“.</p>
         </div>
 	<div class="textbox">
-	    <h2>4.2 XML</h2>
+	    <h2 id="xml+schema">4.2 XML</h2>
             <p>Eine der größten Schwächen von SGML ist, dass es nicht sehr streng ist und Entwicklern recht viele Freiheiten lässt. Das führt dazu, dass die SGML-Spezifikation sehr umfangreich ist, da es trotz dieser Freiheiten natürlich noch möglich sein muss, Dokumente erzeugen zu können, die von Parsern auf Korrektheit geprüft werden können.</p>
         </div>
 	<div class="definition">
@@ -445,7 +502,7 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
             <p>XML erlaubt es, ebenso wie SGML, Sprachen syntaktisch zu definieren. Es nutzt dabei Tags, die den in SGML und damit auch HTML verwendeten sehr ähnlich sind und prinzipiell auch genauso funktionieren. XML-Dokumente werden hauptsächlich zum Datenaustausch verwendet, da sie ein strukturiertes Speichern von Daten ermöglichen. Da sie als einfache Textdateien übermittelt werden können bieten sie ähnliche Vorteile, wie auch HTML-Dateien, nämlich, dass sie von serverseitiger Software sehr einfach eingelesen, verarbeitet, und auch wieder erzeugt werden können. Beispielsweise ist es möglich, eine mit der serverseitigen, auf Java basierenden Technologie JSP erzeugte Objektstruktur über die Programmierschnittstelle JAXB als XML-Dateien zu exportieren und auch Daten aus XML-Dateien wieder an Klassen zu binden.</p>
         </div>
 	<div class="textbox">
-	    <h3>4.2.1 XML und XML-Schema</h3>
+	    <h3 id="schema">4.2.1 XML und XML-Schema</h3>
             <p>Da ein solcher Datenaustausch zwischen verschiedenen Systemen einheitlich genormt sein muss, sollten die beteiligten XML-Dokumente wohlgeformt sein. Kriterien zur Wohlgeformtheit umfassen das Vorhandensein eines Wurzelelements, das Einleiten und Abschließen von Elementen mit Inhalt mit Anfangs- und Endtags und das korrekte Verschachteln von Elementen ineinander, vgl. [W3C03 Kapitel 2.1]. Ist ein XML-Dokument wohlgeformt und richtet es sich nach einer festgelegten Grammatik, gilt es als gültig und kann zum Datenaustausch verwendet werden. Eine Grammatik kann wiederum durch eine DTD oder ein XML-Schema festgelegt werden. Da DTDs allerdings eher altmodisch sind und es an Möglichkeiten der Syntaxüberprüfung und der Festlegung von Datentypen mangelt, werden eher XML-Schemas verwendet. Ein beispielhaftes XML-Schema für einen Datentyp „student“ könnte wie folgt aussehen:</p>
         </div>
 	<div class="abbildung">
@@ -455,7 +512,7 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
             <p>Quellcode 4.2.1.1 definiert einen Datentyp “student”, welcher dann in einem XML-Dokument benutzt und mit Daten befüllt werden kann. Es wird dabei festgelegt, dass ein „student“ einen Nachnamen, einen Vornamen und eine Matrikelnummer haben muss. Die Definition des Datentyps wird mit dem Tag <xs:complextype> eingeleitet, welcher als Attribut den Namen des Datentypen bekommt. Ein Datentyp wird als komplexer Typ definiert, wenn er weitere Elemente enthält. Soll ein Datentyp mehrere Elemente enthalten, müssen diese in einer Sequenz definiert werden, die mit <xs:sequence> eingeleitet wird. Konkret bedeutet dies, dass die Elemente beim Verwenden des Datentyps immer in dieser Reihenfolge genannt werden müssen. Die Elemente selbst müssen jeweils einen Namen, sowie einen Datentyp besitzen. Sie sind daher vergleichbar mit Attributen in einer Java-Klasse. Auch die hierbei möglichen Datentypen sind vergleichbar mit den aus Java bekannten. So gibt es die numerischen Datentypen xs:integer für Ganzzahlen, xs:float für Gleitkommazahlen und xs:decimal für Dezimalzahlen. Für Zeichenketten gibt es xs:string, für Wahrheitswerte xs:boolean. Zeit und Datum können jeweils mit xs:time und xs:date dargestellt werden. Zusätzlich zu diesen eher grundlegenden Datentypen gibt es allerdings auch für ein XML Schema spezifische Datentypen. Dazu gehört unter anderem xs:QName, der einen eindeutigen Namen bezeichnet. Um ein Kürzel für eine Sprache zu bezeichnen, wie zum Beispiel en-US für amerikanisches Englisch, nutzt man xs:language. Eine URI kann man mit xs:anyURI einfügen. Der Student verfügt also über einen Nachnamen und einen Vornamen, die jeweils als Zeichenketten definiert sind. Weiterhin hat er eine Matrikelnummer, die als Ganzzahl gespeichert wird. Außerdem können einem Studenten mit xs:attribute Attribute hinzugefügt werden, in diesem Beispiel wird dies mit einem ein ID-Attribut gezeigt.</p>
         </div>
 	<div class="textbox">
-	    <h3>4.2.2 XML</h3>
+	    <h3 id="xml">4.2.2 XML</h3>
             <p>In einem XML-Dokument würde die Datenstruktur dann wie folgt verwendet werden können:</p>
         </div>
 	<div class="abbildung">
@@ -471,7 +528,7 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
             <p>Für den Laien bietet es sich an, sich die Relation zwischen XML und XML-Schema ähnlich vorzustellen wie die zwischen einer Klasse in Java und einer Instanz dieser Klasse. Ein XML-Schema definiert den Aufbau eines Datentyps mit seinen Elementen und deren erlaubten Werten. Dies ist vergleichbar mit einer Java Klasse, die Attribute definiert, die dann zur Laufzeit befüllt werden. Die Anwendung der im Schema festgelegten Grammatik in einem XML-Dokument kann man dann mit einer Objektinstanz vergleichen, in welcher die in der Klasse einmalig definierte Struktur mit konkreten Daten befüllt wird, und die für weitere Zwecke verwendet werden kann.</p>
         </div>
 	<div class="textbox">
-	    <h2>4.3 JSON</h2>
+	    <h2 id="json">4.3 JSON</h2>
             <p>Eine weitere Möglichkeit zum Austausch von Daten zwischen zwei Kommunikationspartnern bietet JSON. Es ist eine einfache Art, strukturierte Daten zu übertragen. Die Daten sind dabei in Key=Value-Paaren organisiert und können sowohl in geordneter als auch ungeordneter Reihenfolge aufgelistet werden. JSON erlaubt Datentypen, die den grundlegenden Datentypen und -strukturen in den meisten gängigen Programmiersprachen entsprechen: Zahlen, Zeichenketten, Arrays und Objekte. Zusätzlich gibt es die Wahrheitswerte true und false, sowie null. Dies ist dahingehend praktisch, dass es die Existenz von Parsern in den meisten Programmiersprachen begünstigt, mit denen Daten aus JSON-Dateien in Daten- beziehungsweise Objektstrukturen eines Programms eingelesen werden können.</p>
         </div>
 	<div class="textbox">
@@ -500,11 +557,11 @@ Nach dem Durcharbeiten dieses Kapitels sollten Leser in der Lage sein:<br><br>
             <p>Es kann also mithilfe einer von JavaScript bereitgestellten Funktion namens eval() direkt ausgewertet werden. Aus diesem Grund bietet es sich zur Datenübertragung an, da die Daten aus JSON-Objekten nicht wie bei XML erst aus der Datenstruktur extrahiert werden müssen, sondern direkt interpretiert beziehungsweise verwendet werden können.</p>
         </div>
 	<div class="textbox">
-	    <h2>4.4 Zusammenfassung</h2>
+	    <h2 id="datazsm">4.4 Zusammenfassung</h2>
             <p>Dieses Kapitel hat sich mit den Grundlagen zu HTML, XML und JSON befasst. Anhand konkreter Beispiele wurde dabei der Syntax der Sprachen kurz erklärt, woraufhin ihre Anwendungszwecke genauer beleuchtet wurden. Außerdem wurde der Ablauf beim Laden einer HTML-Seite anhand eines Beispiels beschrieben.</p>
         </div>
 	<div class="textbox">
-	    <h1>Literaturverzeichnis</h1>
+	    <h1 id="literatur">Literaturverzeichnis</h1>
             <p>Brian Totty, David Gourley, Marjorie Sayer, Anshu Aggarwal, Sailu Reddy: HTTP – The Definitive Guide; O’Reilly & Associates, Inc.; 2002; Kapitel 1 – 4; ISBN 978-1565925090<br>
 <br>[BFM01] T. Berners-Lee, R. Fielding, L. Masinter: RFC 3986  - Uniform Resource Identifier (URI): Generic Syntax; 2005; <https://tools.ietf.org/html/rfc3986> (19.11.2019 08:45)<br>
 <br>[FR02] R. Fielding, J. Reschke: RFC 7231 – Hypertext Transfer Protokoll (HTTP/1.1): Semantics and Content; 2014; <https://tools.ietf.org/html/rfc7231> (04.12.2019 22:22)<br>
