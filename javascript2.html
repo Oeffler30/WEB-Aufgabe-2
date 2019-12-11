@@ -6,6 +6,30 @@
     <meta charset="UTF-8">
     <script src="scroll+navicon.js"></script>
     <title>CSS</title>
+    <style>
+        h2.index {margin: 0.5em 1em;}
+        ul.index {margin: 0 2em;}
+        ul.index a {text-decoration: none;color: white; padding: 0.5em; display: inline-block; width: 13em; }
+        ul.index a:hover { background-color: #1565C0;}
+        .chapter {margin: 1em 0 0; }
+        .headline2 {margin-bottom: 1em;}
+        .subtopic {margin: 1em 0 1em 1em;}
+        .subpoint {margin: 1em 0 1em 1em;}
+        .subsubpoint {margin: 1em 0 1em 1em;}
+        ul.bulletpointul, ol.bulletpointul{margin: 1em 0 1em 1em;}
+        ul li.bulletpoint2, ol li.bulletpoint2 {margin-left: 1em;}
+        ul li.bulletpoint3, ol li.bulletpoint3 {margin-left: 2em;}
+        ul li.bulletpoint4, ol li.bulletpoint4 {margin-left: 3em;}
+        .chapter p.paragraph {margin: 1em 0;}
+        .chapter img {max-width: 100%;margin: 1em 0;}
+        .chapter pre {white-space: pre-wrap;}
+        .chapter code {display: inline-block;}
+        .chapter a {text-decoration: none;color: white;}
+        .textbox table {border-collapse: collapse;margin: 1em 0;}
+        .textbox table, .textbox th, .textbox td {border: 1px solid black; padding: 0.5em;}
+        .textbox tr:nth-child(even) {background-color: #242424;}
+        .textbox thead {background-color: #575757}
+    </style>
 </head>
 <body>
 <script>
@@ -107,7 +131,7 @@
                 <li><a class="hashindex"  href="#arrays">Arrays</a> </li>
                 <li><a class="hashindex"  href="#funktionen">Funktionen</a> </li>
                 <li><a class="hashindex"  href="#objekte">Objekte</a> </li>
-                <li><a class="hashindex"  href="#eventhandler">Eventhandler</a> </li>
+                <li><a class="hashindex"  href="#dom">JavaScript im DOM</a> </li>
                 <li><a class="hashindex"  href="#eventhandler">Eventhandler</a> </li>
                 <li><a class="hashindex"  href="#jquery">JQuery</a> </li>
                 <li><a class="hashindex"  href="#ajax">Ajax</a> </li>
@@ -1027,9 +1051,10 @@ println(g); // 42.00000
                 </div>
             </div>
             <div id="objekte" class="chapter">
-                <h2 class="headline2">JavaScript kennt keine Klassen, sondern nur Objekte</h2>
+                <h2 class="headline2">Objekte</h2>
                 <div class="subtopic">
                     <h3 class="headline3">Objektbasierend statt Objektorientiert</h3>
+                    <p class="paragraph">JavaScript kennt keine Klassen, sondern nur Objekte</p>
                     <p class="paragraph">Funktionen sind in JavaScript auch Objekte</p>
                     <p class="paragraph">Objekte können von Objekten erben: prototypische Vererbung</p>
                     <p class="paragraph">In Java...</p>
@@ -1123,6 +1148,153 @@ println(mueller.details());
 //Name: Meier, Franz, geboren: 1.5.1972Name: M&uuml;ller, Peter, geboren: 8.11.1981
 </code></pre>
                     </div>
+                </div>
+                <div class="subtopic">
+                    <h2  class="headline2">Prototypen in JavaScript</h2>
+                    <p class="paragraph">Zu jeder Funktion gehört ein Prototyp, das sogenannte prototype object.</p>
+                    <p class="paragraph">Der Zugriff erfolgt über <code>Funktionsname.prototype</code></p>
+                    <p class="paragraph">Wird die Funktion als Konstruktor mit <code>new</code> verwendet, dann hat das erzeugte Objekt eine Referenz zum Prototypen.</p>
+                    <p class="paragraph">Sind Attribute und Funktionen nicht im Objekt definiert, dann werden sie im Prototypen gesucht.</p>
+
+                    <div class="subpoint">
+                        <h3 class="headline3"> Ein Beispiel</h3>
+                        <img class="image" src="./img_js_script/folie82.png">
+<pre><code>
+function Tier(name) {
+    this.name = name;
+}
+Tier.prototype.fressen = function() {
+     println(&quot;Mampf&quot;);
+};
+Tier.prototype.fluechten = function() {
+    println(&quot;Lauf weg&quot;);
+};
+
+Tier.prototype.beine = 4;
+Tier.prototype.augen = 2;
+
+var spinne = new Tier(&quot;Spinne&quot;);
+spinne.beine = 8;
+spinne.augen = 12;
+spinne.fressen();
+spinne.fluechten();
+println(&quot;Beine = &quot; + spinne.beine);
+println(&quot;Augen = &quot; + spinne.augen);
+
+var ente = new Tier(&quot;Ente&quot;);
+ente.fluechten = function() {
+    println(&quot;Flieg weg&quot;);
+};
+Tier.prototype.beine = 2;
+ente.fressen();
+ente.fluechten();
+println(&quot;Beine = &quot; + ente.beine);
+println(&quot;Augen = &quot; + ente.augen);
+
+var dackel = new Tier(&quot;Dackel&quot;);
+dackel.fressen();
+dackel.fluechten();
+println(&quot;Beine = &quot; + dackel.beine);
+println(&quot;Augen = &quot; + dackel.augen);
+</code></pre>
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h2 class="headline2"> Prototypische Vererbung in JavaScript</h2>
+                    <p class="paragraph">Objekte können als Vorlage für neue Objekte dienen</p>
+                    <p class="paragraph">Mit <code>Object.create(object)</code> kann man ein Objekt erzeugen, das das gegebene Objekt als Vorlage benutzt.</p>
+                    <p class="paragraph">Das erzeugte Objekt kann man anpassen:</p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint"><code>erweitern, </code></li>
+                        <li class="bulletpoint"><code>Methoden verändern,</code></li>
+                        <li class="bulletpoint"><code>etc.</code></li>
+                    </ul>
+                    <p class="paragraph">Von dem neuen Objekt kann man wieder weitere Objekte erzeugen.</p>
+
+                    <div class="subpoint">
+                        <h3 class="headline3">Ein Beispiel</h3>
+                        <img class="image" src="./img_js_script/folie88.png">
+<pre><code>
+function Tier(name) {
+    this.name = name;
+}
+Tier.prototype.printName = function() {
+    println(this.name);
+};
+Tier.prototype.bewegen = function() {
+    println(&quot;bewege mich&quot;);
+};
+Tier.prototype.fressen = function() {
+    println(&quot;fressen&quot;);
+};
+
+var katze = Object.create(new Tier(&quot;Felizitas&quot;));
+katze.bewegen = function() {
+    println(&quot;leise schleichen&quot;);
+};
+katze.bewegen();
+katze.fressen();
+katze.printName();
+
+var perserkatze = Object.create(katze);
+perserkatze.name = "Perserkatze";
+perserkatze.fressen = function() {
+    println("Sheba geniessen");
+};
+perserkatze.bewegen();
+perserkatze.fressen();
+perserkatze.printName();
+
+
+</code></pre>
+
+                    </div>
+
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Ausnahmebehandlung</h3>
+                    <p class="paragraph">Es existiert ein <code>try, catch, finallyähnlich wie in Java.</code></p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">Ausnahmen sind jedoch leider nicht typisiert.</li>
+                        <li class="bulletpoint">Daher gibt es nur einen <code>catch</code> -Block pro try.</li>
+                        <li class="bulletpoint"><code>finally</code> wird immer ausgeführt.</li>
+                    </ul>
+                    <div class="subpoint">
+                        <h4 class="headline4">Ein Beispiel</h4>
+<pre><code>
+try {
+    println(&quot;Vor dem throw...&quot;);
+    throw {
+        name: &quot;Fehlermeldung&quot;
+    };
+    println(&quot;Nach dem throw...&quot;);
+} catch (e) {
+    // Fehlerbehandlung
+    println(&quot;Ooops: &quot; + e.name);
+} finally {
+    // wird immer ausgef&uuml;hrt
+    println(&quot;finally&quot;);
+}
+</code></pre>
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Doch klassen?</h3>
+                    <p class="paragraph">Seit ES2015 besitzt JavaScript eine <code>class</code>-Syntax.</p>
+                    <p class="paragraph">Dies ist jedoch nur Kosmetik...</p>
+<pre><code>
+class Auto2 {
+    constructor (marke, model, jahr) {
+        this.marke = marke;this.model = model;this.jahr = jahr;
+    }
+    methode () {
+        return &apos;Methode&apos;;
+    };
+}
+const auto3 = new Auto2(&apos;Marke1&apos;, &apos;Model1&apos;, 1991);
+console.log(auto3.jahr, auto3.marke, auto3.model, auto3.methode());
+// 1991 Marke1 Model1 Methode
+</code></pre>
                 </div>
             </div>
             <div id="eventhandler" class="chapter">
@@ -1314,6 +1486,236 @@ form.onclick = function(event) {
 
 </code></pre>
                     <a href="https://wiki.selfhtml.org/wiki/JavaScript/DOM/EventTarget/addEventListener">https://wiki.selfhtml.org/wiki/JavaScript/DOM/EventTarget/addEventListener</a>
+                </div>
+            </div>
+            <div id="dom" class="chapter">
+                <h2 class="headline2">JavaScript im DOM</h2>
+                <div class="subtopic">
+                    <h3 class="headline3">Was ist das DOM?</h3>
+                    <p class="paragraph">Das Document Object Model (DOM) ist eine W3C-Spezifikation einer Programmierschnittstelle, welche HTML-oder XML-Dokumente als eine Baumstruktur darstellt.</p>
+                    <p class="paragraph">In der Baumstruktur ist jeder Knoten ein Objekt, welches einen Teil des Dokumentes repräsentiert, wie </p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">ein Absatz,</li>
+                        <li class="bulletpoint">eine Überschrift,</li>
+                        <li class="bulletpoint">ein Video oder</li>
+                        <li class="bulletpoint">eine Tabellenzelle.</li>
+                    </ul>
+                    <p class="paragraph">Die Schnittstelle ist plattform-und programmiersprachenunabhängig und erlaubt damit standardisiert, die Struktur und das Layout eines Dokumentes zu verändern.</p>
+                    <p class="paragraph">In einem Internet-Browser bildet dies einen wichtigen Baustein für client-seitige dynamische Webseiten.</p>
+
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Der DOM-Baum im HTML</h3>
+                    <img class="image" src="./img_js_script/folie101-1.png">
+                    <img class="image" src="./img_js_script/folie101-2.png">
+
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">DOM Level 0</h3>
+                    <p class="paragraph">der Browser stellt bei DOM Level 0ein Objekt-Modell zur Verfügung</p>
+                    <p class="paragraph">das Objekt-Modell enthält Collections von DOM-Knoten, auf die zugegriffen werden kann</p>
+                    <p class="paragraph">DOM Level 0 ist <strong>keine</strong> offizielle DOM-Version</p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">sie wurde eingeführt von einigen Browser-Herstellern</li>
+                        <li class="bulletpoint">sie wurde nie formal spezifiziert</li>
+                        <li class="bulletpoint">sie ist inzwischen veraltet und sollte nicht mehr verwendet werden</li>
+                    </ul>
+                    <div class="subpoint">
+                        <h4 class="headline4">Der DOM Level 0 Baum</h4>
+                        <img class="image" src="./img_js_script/folie103.png">
+
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">Zugriffe:Der HTML-Baum</h4>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name=&quot;eingabe&quot; method=&quot;post&quot; action=&quot;/tuwas.php&quot;&gt;
+        &lt;label for=&quot;input_name&quot;&gt;Name:&lt;/label&gt;
+        &lt;input id=&quot;input_name&quot; type=&quot;text&quot; name=&quot;nachname&quot; value=&quot;Franz Mustermann&quot;&gt;
+    &lt;/form&gt;
+    &lt;div class=&quot;plain&quot;&gt;
+        &lt;form name=&quot;eingabe&quot; method=&quot;post&quot; action=&quot;/tuwas.php&quot;&gt;
+        &lt;label for=&quot;input_name&quot;&gt;Name:&lt;/label&gt;
+        &lt;input id=&quot;input_name&quot; type=&quot;text&quot; name=&quot;nachname&quot; value=&quot;Franz Mustermann&quot;&gt;
+    &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">Der JavaScript-Code</h4>
+<pre><code>
+    &lt;script&gt;
+        console.log(document.forms[0].elements[0].value);
+        console.log(document.forms[&quot;eingabe&quot;].elements[&quot;nachname&quot;].value);
+        console.log(document.forms.eingabe.nachname.value);
+        console.log(window.document.forms[0].nachname.value);
+    &lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+                        <img class="image" src="./img_js_script/folie105.png">
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">DOM Level 2</h3>
+                    <p class="paragraph">DOM Level 2 ist die Schnittstelle zum Zugriff auf HTML-Dokumente</p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">sie ist formal spezifiziert und standardisiert durch W3C</li>
+                        <li class="bulletpoint">sie wird von allen gängigen Browsern unterstützt</li>
+                        <li class="bulletpoint">sie kann auch von anderen Programmiersprachen als JavaScript verwendet werden</li>
+                    </ul>
+                    <p class="paragraph">Erweiterungen gegenüber DOM Level 0:</p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">alle Elemente und alle Attribute einer HTML-Seite sind voll ansprechbar</li>
+                        <li class="bulletpoint">ein Zugriff auf XHTML-Dokumente ist möglich</li>
+                        <li class="bulletpoint">die nachträgliche Erzeugung von Elementen und deren Einhängen in den Dokumenten-Baum wird möglich</li>
+                    </ul>
+                    <div class="subpoint">
+                        <h4 class="headline4">Struktur</h4>
+                        <img class="image" src="./img_js_script/folie107.png">
+
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">Ein HTML-Dokument als Beispiel</h4>
+                        <img class="image" src="./img_js_script/folie108.png">
+
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">Der dazu passende DOM Level 2 Baum</h4>
+                        <img class="image" src="./img_js_script/folie109.png">
+
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">Noch ein DOM Level 2 Baum</h4>
+                        <img class="image" src="./img_js_script/folie110.png">
+                        <a href="https://wiki.selfhtml.org/wiki/JavaScript/DOM">https://wiki.selfhtml.org/wiki/JavaScript/DOM</a>
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Das node-Objekt</h3>
+                    <p class="paragraph">Knoten des DOM-Baumes werden durch node-Objekte repräsentiert</p>
+                    <p class="paragraph">Mögliche Arten von Knoten sind</p>
+                    <ul class="bulletpointul">
+                        <li class="bulletpoint">Elementknoten,</li>
+                        <li class="bulletpoint">Textknoten und</li>
+                        <li class="bulletpoint">Attributknoten</li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Attribut</th><th>Bedeutung</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>nodeName</td><td>Elementname</td></tr>
+                            <tr><td>nodeType</td><td>Knotentyp (1=Element, 2=Attribut, 3=Text)</td></tr>
+                            <tr><td>nodeValue</td><td>Wert des Knotens</td></tr>
+                            <tr><td>data</td><td>Rumpftext (nur bei Textknoten)</td></tr>
+                            <tr><td>attributes</td><td>Array aller Attribute</td></tr>
+                            <tr><td>parentNode</td><td>Vaterknoten</td></tr>
+                            <tr><td>childNodes</td><td>Array aller Kinderknoten</td></tr>
+                            <tr><td>firstChild</td><td>erster Kindknoten</td></tr>
+                            <tr><td>lastChild</td><td>letzter Kindknoten</td></tr>
+                            <tr><td>previousSibling</td><td>linker Nachbarknoten</td></tr>
+                            <tr><td>nextSibling</td><td>rechter Nachbarknoten</td></tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Knoten-Beziehungen</h3>
+                    <div class="subpoint">
+                        <h4 class="headline4">childNodes</h4>
+                        <img class="image" src="./img_js_script/folie121.jpg">
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">parent</h4>
+                        <img class="image" src="./img_js_script/folie122.jpg">
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">firstChild</h4>
+                        <img class="image" src="./img_js_script/folie123.jpg">
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">lastChild</h4>
+                        <img class="image" src="./img_js_script/folie124.jpg">
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">previousSibling</h4>
+                        <img class="image" src="./img_js_script/folie125.jpg">
+                    </div>
+                    <div class="subpoint">
+                        <h4 class="headline4">followingSibling</h4>
+                        <img class="image" src="./img_js_script/folie126.jpg">
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">Beispiel für eine DOM-Manipulation</h3>
+                    <p class="paragraph">Alle Absätze im Dokument gelb einfärben...</p>
+<pre><code>
+var allParas = document.querySelectorAll(&quot;p&quot;);
+for (var i = 0; i &lt; allParas.length; i++) {
+    allParas[i].style.backgroundColor = &quot;yellow&quot;;
+}
+</code></pre>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">DOM innerHTML hacking</h3>
+                    <p class="paragraph">Dies sollte vermieden werden, da es sehr schnell komplex wird...</p>
+<pre><code>
+document.getElementById(&quot;myid&quot;).innerHTML += &quot;&lt;p&gt;A paragraph!&lt;/p&gt;&quot;;
+document.getElementById(&quot;myid&quot;).innerHTML +=&quot;&lt;p style=&apos;color: red; &quot; +&quot;margin-left: 50px;&apos; &quot; +&quot;onclick=&apos;myOnClick();&apos;&gt;&quot; +&quot;A paragraph!&lt;/p&gt;&quot;;
+</code></pre>
+                    <div class="subpoint">
+                        <h4 class="headline4">Besser: Neuen DOM-Knoten anlegen...</h4>
+                        <ul class="bulletpointul">
+                            <li class="bulletpoint"><code>document.createElement("tag")</code><br>erzeugt einen neuen (leeren) DOM-Knoten vom gegebenen Typ </li>
+                            <li class="bulletpoint"><code>document.createTextNode("text")</code><br>erzeugt einen Textknoten mit dem angegebenen Text als Inhalt</li>
+                            <li class="bulletpoint">Dies ist besser...</li>
+<pre><code>
+var heading = document.createElement(&quot;h2&quot;);
+heading.innerHTML = &quot;Dies ist eine H2-&Uuml;berschrift&quot;;
+heading.style.color = &quot;green&quot;;
+var vorhanden = document.getElementById(&quot;box1&quot;);
+vorhanden.appendChild(heading);
+</code></pre>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subtopic">
+                    <h3 class="headline3">DOM-Baum verändern</h3>
+                    <p class="paragraph">Jeder DOM-Knoten hat eine Reihe von Methoden, um den Baum zu verändern.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Methode</th><th>Beschreibung</th>
+                            </tr>
+                            </thead>
+                        <tbody>
+                            <tr><td>appendChild(node)</td><td>Fügt Konten am Ende der Kinder an</td></tr>
+                            <tr><td>insertBefore(new, old)</td><td>Fügt den Knoten vor dem angegebenen Kindknoten ein</td></tr>
+                            <tr><td>removeChild(node)</td><td>Entfernt das angegebene Kind</td></tr>
+                            <tr><td>replaceChild(new, old)</td><td>Ersetzt das Kind mit einem neuen Knoten</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="subpoint">
+                        <h4 class="headline4">Beispiele zum Einfügen und Löschen</h4>
+<pre><code>
+var p = document.createElement(&quot;p&quot;);
+p.innerHTML = &quot;A paragraph!&quot;;
+document.getElementById(&quot;myid&quot;).appendChild(p);
+var bullets = document.getElementsByTagName(&quot;li&quot;);
+for (var i = 0; i &lt; bullets.length; i++) {
+    if (bullets[i].innerHTML.indexOf(&quot;child&quot;) &gt;= 0) {
+        bullets[i].parentNode.removeChild(bullets[i]);
+    }
+}
+</code></pre>
+                    </div>
                 </div>
             </div>
             <div id="jquery" class="chapter">
