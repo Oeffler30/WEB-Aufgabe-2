@@ -33,6 +33,8 @@
 			user = "datenschutz";
 		} else if(user == "Impressum") {
 			user = "Impressum";
+		} else if(user =="CSS 2"){
+			user = "css3-2";
 		}
             
             
