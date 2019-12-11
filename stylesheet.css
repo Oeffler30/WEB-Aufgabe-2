@@ -48,6 +48,18 @@ body{
   margin: 14em auto 0;
 }
 
+a:link, a:visited
+{
+color: white;
+}
+
+
+a:active, a:hover
+{
+color:blue;
+}
+
+
 #header {
   height:13em;
   width: 100%;
