@@ -48,18 +48,6 @@ body{
   margin: 14em auto 0;
 }
 
-a:link, a:visited
-{
-color: white;
-}
-
-
-a:active, a:hover
-{
-color:blue;
-}
-
-
 #header {
   height:13em;
   width: 100%;
@@ -167,6 +155,10 @@ color:blue;
 	color: red;
 }
 
+.gruen {
+	color: LightGreen;
+}
+
 .textCode {
 	font-family: "Courier New", Courier, monospace;
 }
@@ -179,6 +171,17 @@ color:blue;
 .nodeBild {
 	width: 60%;
 	height: auto;
+}
+
+#cont {
+	display:flex;
+    	flex-direction:row;
+	justify-content: space-around;
+}
+
+#side1 {
+	display:flex;
+    	flex-direction:column;
 }
 /*--------------------------------------------------------------*/
 
