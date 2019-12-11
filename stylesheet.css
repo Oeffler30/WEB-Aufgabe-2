@@ -3,30 +3,7 @@
    so we can override them cleanly later*/
   padding: 0;
   margin: 0;
-}<style>
-  h2.index {margin: 0.5em 1em;}
-ul.index {margin: 0 2em;}
-ul.index a {text-decoration: none;color: white; padding: 0.5em; display: inline-block; width: 13em; }
-ul.index a:hover { background-color: #1565C0;}
-.chapter {margin: 1em 0 0; }
-.headline2 {margin-bottom: 1em;}
-.subtopic {margin: 1em 0 1em 1em;}
-.subpoint {margin: 1em 0 1em 1em;}
-.subsubpoint {margin: 1em 0 1em 1em;}
-ul.bulletpointul, ol.bulletpointul{margin: 1em 0 1em 1em;}
-ul li.bulletpoint2, ol li.bulletpoint2 {margin-left: 1em;}
-ul li.bulletpoint3, ol li.bulletpoint3 {margin-left: 2em;}
-ul li.bulletpoint4, ol li.bulletpoint4 {margin-left: 3em;}
-.chapter p.paragraph {margin: 1em 0;}
-.chapter img {max-width: 100%;margin: 1em 0;}
-.chapter pre {white-space: pre-wrap;}
-.chapter code {display: inline-block;}
-.chapter a {text-decoration: none;color: white;}
-.textbox table {border-collapse: collapse;margin: 1em 0;}
-.textbox table, .textbox th, .textbox td {border: 1px solid black; padding: 0.5em;}
-.textbox tr:nth-child(even) {background-color: #242424;}
-.textbox thead {background-color: #575757}
-</style>
+}
 
 //Cookiebanner formatierung
 .js_enabled #cookie-message {
@@ -57,17 +34,6 @@ ul li.bulletpoint4, ol li.bulletpoint4 {margin-left: 3em;}
  border: none;
  background: orange;
  box-shadow: 0px 0px 1px #777;
-}
-
-a:link, a:visited
-{
-color: white;
-}
-
-
-a:active, a:hover
-{
-color:blue;
 }
 
 body{
@@ -176,6 +142,7 @@ body{
 }
 
 .abbildung {
+	text-align:center;
 	font-style: italic;
 }
 
