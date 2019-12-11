@@ -8,6 +8,7 @@
         if (user != "") {
 			cookieMessage.style.display = 'none';
             var ausgabe = document.getElementById('info');
+			acceptCookie();
 	    var link = document.createElement("a");
 	    var infoText = user;
 	    	if(user == "HTML") {
