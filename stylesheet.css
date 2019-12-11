@@ -233,6 +233,11 @@ body{
 /*below 768px*/
 @media screen and (max-width: 768px) {
 
+  .nodeBild {
+	width: 100%;
+	height: auto;
+  }
+
   #header {
     overflow-y: unset;
   }
