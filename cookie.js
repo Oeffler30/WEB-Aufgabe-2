@@ -20,6 +20,18 @@
 			user = "grundlagen";
 		} else if(user == "Startseite") {
 			user = "index";
+		} else if(user == "Javascript (2)") {
+			user = "javascript2";
+		} else if(user == "Javascript") {
+			user = "javascript";
+		} else if(user == "PHP") {
+			user = "php";
+		} else if(user == "NodeJS") {
+			user = "nodejs";
+		} else if(user == "Datenschutz") {
+			user = "datenschutz";
+		} else if(user == "Impressum") {
+			user = "Impressum";
 		}
             
             
