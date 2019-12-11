@@ -47,8 +47,22 @@
     </div>
     <div class="content-container">
         <h1>JSP, Servlets, JAXB</h1>
+	    
+<h4 id="Inhalt">Links zu den Unterkapiteln</h4>
+		<a href = #Kap1 style="color:white">1: Die Idee server-seitiger Skriptsprachen</a><br/>
+		<a href = #Kap2 style="color:white">2: Java Server PagesJSP</a><br/>
+		<a href = #Kap3 style="color:white">3: Ein JSP-Beispiel: Artikelverwaltung</a><br/>
+		<a href = #Kap4 style="color:white">4: Java Servlets</a><br/>
+		<a href = #Kap5 style="color:white">5: Ein Servlet-Beispiel: Artikelverwaltung</a><br/>
+		<a href = #Kap6 style="color:white">6: Session-Handling</a><br/>
+		<a href = #Kap7 style="color:white">7: Bilder dynamisch erzeugen und übertragen</a><br/>
+		<a href = #Kap8 style="color:white">8: JSPs und Servlets im MVC / MVP</a><br/>
+		<a href = #Kap9 style="color:white">9: Java Architecture for XML Binding JaxB</a><br/>
+		<a href = #Kap10 style="color:white">10: Ein JaxB-Beispiel: Studentenverwaltung</a><br/>
+
+		
 <div class="textbox">
-			<h2>Die Idee server-seitiger Skriptsprachen</h2>
+			<h2 id="Kap1">1 Die Idee server-seitiger Skriptsprachen</h2>
             <p>Die bisher bekannte Technologien...</br>• HTML unterstützt statische Seiten.</br>• CSS unterstützt das Layout im Web-Browser.</br>
 				• JavaScript bietet mit DOM client-seitige Programmierung.</br>• CGI erlaubt eine server-seitige Anbindung für beliebige traditionelle 
 				Programmiersprachen.</br>Probleme auf der Seite des Servers sind, dass</br>• die Web-Programmierung damit unbequem ist, da die CGI-Dateien nicht mit 
@@ -66,7 +80,7 @@ Beispiele solcher server-seitiger Skriptsprachen sind:<br/>
 		</p>
 	</div>
         <div class="textbox">
-		<h2>Java Server Pages (JSP)</h2></br> 
+		<h2 id="Kap2">2 Java Server Pages (JSP)</h2></br> 
 		<h4>Was ist eine JSP-Datei?</h4>
             <p>• Java Server Pages (JSP) ist eine Web-Programmiersprache zur einfachen dynamischen Erzeugung von HTML- und XML-Ausgaben eines Web-Servers.<br/> • JSPs werden unter Verwendung eines speziellen JSP-Compilers in 
 Java-Quellcode umgewandelt. <br/>&nbsp &nbsp • Dieser Quellcode, der einem Java Servlet entspricht, wird im Anschluss durch den Java-Compiler in Bytecode umgewandelt. <br/>&nbsp &nbsp • Die so erzeugten Java-Klassen können dann von einem mit einer Java-
@@ -265,12 +279,12 @@ Web-Anwendung dieses Web-Servers.</br></br>
 integrieren.</br>
 • Neues „dynamisches Web-Projekt“ anlegen.</br>
 • Im Ordner WebContent eine neue JSP anlegen mit folgendem Code...</br>
-<img src="JSPimages/F23-HalloWeltJSP.png" alt="CodeBeispiel" width="40%" height="40%" align="center"></br></br>
+<img src="JSPimages/F23-HalloWeltJSP.png" alt="CodeBeispiel" width="60%" height="40%" align="center"></br></br>
 
 
 • Diesen Code auf dem Server ausführen und anzeigen lassen.</br>
 • Eclipse ist auch ein Web-Browser!</br>
-<img src="JSPimages/F24-HalloWeltJSP.png" alt="CodeBeispiel" width="60%" height="60%" align="center"></br></br>
+<img src="JSPimages/F24-HalloWeltJSP.png" alt="CodeBeispiel" width="70%" height="70%" align="center"></br></br>
 
 • System.out ist der Server!</br>
 <img src="JSPimages/F25-HalloWeltJSP.png" alt="CodeBeispiel" width="80%" height="60%" align="center"></br></br>
@@ -287,14 +301,17 @@ bestimmte Regeln hält:</br>
 &nbsp &nbsp • Die Zugriffsmethoden auf die Eigenschaften (getter und setter) sind öffentlich sichtbar.</br>
 • Diese Regeln sind u.a. notwendig, damit Applicationserver Beans dynamisch per Reflection erzeugen und aus einer Datenbank befüllen 
 können.</br>
-• Aufgrund dieser Eigenschaften eignen sich JavaBeans auch als Datenobjekte für Persistenz-Frameworks (Enterprise JavaBeans).</br>
+• Aufgrund dieser Eigenschaften eignen sich JavaBeans auch als Datenobjekte für Persistenz-Frameworks (Enterprise JavaBeans).</br></br>
+
+		<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+
 			</p>
         </div>
        
 
 	   <div class="textbox">
 		<p>
-		<h2>Ein JSP-Beispiel:Artikelverwaltung</h2></br>
+		<h2 id="Kap3">3 Ein JSP-Beispiel:Artikelverwaltung</h2></br>
 		
 		<h4>Die Beispielaufgabe...</h4>			
 • Es soll eine bestehende Artikelverwaltungsklasse mit einem 
@@ -307,38 +324,40 @@ Servlet-Frontend versehen werden. Dabei sollen <br/>
 &nbsp &nbsp • Artikel gelöscht werden können.<br/> <br/> 
 
 <h4>Die Hauptseite</h4>
-<img src="JSPimages/F30-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F30-Beispielaufgabe.png" alt="CodeBeispiel" width="70%" height="50%" align="center"></br></br>
 
 <h4>Die Hauptseite</h4>
-<img src="JSPimages/F31-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="40%" align="center"></br></br>
+<img src="JSPimages/F31-Beispielaufgabe.png" alt="CodeBeispiel" width="70%" height="40%" align="center"></br></br>
 
 <h4>Header & Footer</h4>
-<img src="JSPimages/F32-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="40%" align="center"></br></br>
+<img src="JSPimages/F32-Beispielaufgabe.png" alt="CodeBeispiel" width="70%" height="60%" align="center"></br></br>
 
 <h4>Das Menu</h4>
-<img src="JSPimages/F33-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F33-Beispielaufgabe.png" alt="CodeBeispiel" width="70%" height="60%" align="center"></br></br>
 
 <h4>Tipp: Denken Sie ans Republishing!</h4>
-<img src="JSPimages/F34-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F34-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="60%" align="center"></br></br>
 
 <h4>Neuen Artikel anlegen</h4>
-<img src="JSPimages/F35-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F35-Beispielaufgabe.png" alt="CodeBeispiel" width="80%" height="70%" align="center"></br></br>
 
 <h4>Neuen Artikel anlegen</h4>
-<img src="JSPimages/F36-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F36-Beispielaufgabe.png" alt="CodeBeispiel" width="70%" height="60%" align="center"></br></br>
 
 <h4>Neuen Artikel anlegen: Das konkrete Anlegen über die Bean</h4>
-<img src="JSPimages/F37-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F37-Beispielaufgabe.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Neuen Artikel anlegen: Weiterleitung auf die Artikelliste</h4>
 <img src="JSPimages/F38-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
 
 <h4>Alle Artikel auflisten</h4>
-<img src="JSPimages/F39-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="50%" align="center"></br></br>
+<img src="JSPimages/F39-Beispielaufgabe.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Alle Artikel auflisten</h4>
-<img src="JSPimages/F40-Beispielaufgabe.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F40-Beispielaufgabe.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
  
+ 		<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+
  </p>
     
 </div>
@@ -347,7 +366,7 @@ Servlet-Frontend versehen werden. Dabei sollen <br/>
 		
 		<div class="textbox">
 		<p>
-		<h2>Java Servlets</h2><br/> 
+		<h2 id="Kap4">4 Java Servlets</h2><br/> 
 		
 		<h4>Was sind Servlets?</h4>
 • Als Servlets bezeichnet man Java-Klassen, deren Instanzen innerhalb eines Java Web-Servers Anfragen von Clients entgegen nehmen & 
@@ -361,16 +380,16 @@ HTML-Seite verfügbar sein.<br/>
 • JSPs und Servlets werden wir uns als etablierte Basis-Technologien des Backends genauer ansehen!<br/> <br/> 
 
 <h4>HTML-Formular, das ein Servlet aufruft</h4>
-<img src="JSPimages/F43-JSPServlet.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F43-JSPServlet.png" alt="CodeBeispiel" width="80%" height="90%" align="center"></br></br>
 
 <h4>Das erste Servlet</h4>
-<img src="JSPimages/F44-JSPServlet.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F44-JSPServlet.png" alt="CodeBeispiel" width="80%" height="90%" align="center"></br></br>
 
 <h4>Das erste Servlet</h4>
-<img src="JSPimages/F45-JSPServlet.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F45-JSPServlet.png" alt="CodeBeispiel" width="80%" height="90%" align="center"></br></br>
 
 <h4>Das Java-Servlet: Interaktion</h4>
-<img src="JSPimages/F46-JSPServlet.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F46-JSPServlet.png" alt="CodeBeispiel" width="80%" height="90%" align="center"></br></br>
 
 <h4>Neue Servlets in Eclipse</h4>
 • Fügen Sie nie ein Servlet über File->New->Class in den Eclipse-Workspace ein.</br>
@@ -379,7 +398,7 @@ HTML-Seite verfügbar sein.<br/>
 Eclipse über File->New->Other->Servlet anlegen!</br></br>
 
 <h4>Funktionsweise eines Servlet-Aufrufs</h4>
-<img src="JSPimages/F48-JSPServlet.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F48-JSPServlet.png" alt="CodeBeispiel" width="100%" height="90%" align="center"></br></br>
 
 <h4>HTML & Servlets</h4>
 • Statt System.out.println wird bei einem Servlet in den HTTP-Ausgabestrom out geschrieben, um dem Client zu antworten.</br>
@@ -390,28 +409,36 @@ Eclipse über File->New->Other->Servlet anlegen!</br></br>
 • Die Interaktion verläuft ggf. über mehrere Servlets und/oder statische HTML-Dateien, die sich gegenseitig über Links und/oder Formulare 
 aufrufen.</br></br>
 
-<h2>Ein Servlet-Beispiel: Artikelverwaltung</h2></br>
+		<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+</p>
+</div>
+
+
+<div class="textbox">
+		<p>
+		
+<h2 id="Kap5">5 Ein Servlet-Beispiel: Artikelverwaltung</h2></br>
 
 <h4>Die Hauptseite</h4>
-<img src="JSPimages/F51-Servletbsp.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F51-Servletbsp.png" alt="CodeBeispiel" width="80%" height="70%" align="center"></br></br>
 
-<img src="JSPimages/F52-Servletbsp.png" alt="CodeBeispiel" width="60%" height="80%" align="center"></br></br>
+<img src="JSPimages/F52-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
-<img src="JSPimages/F53-Servletbsp.png" alt="CodeBeispiel" width="60%" height="80%" align="center"></br></br>
+<img src="JSPimages/F53-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Header & Footer im Framework</h4>
-<img src="JSPimages/F54-Servletbsp.png" alt="CodeBeispiel" width="60%" height="80%" align="center"></br></br>
+<img src="JSPimages/F54-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Das Menu im Framework</h4>
-<img src="JSPimages/F55-Servletbsp.png" alt="CodeBeispiel" width="60%" height="80%" align="center"></br></br>
+<img src="JSPimages/F55-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Die Hauptseite</h4>
-<img src="JSPimages/F56-Servletbsp.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F56-Servletbsp.png" alt="CodeBeispiel" width="70%" height="70%" align="center"></br></br>
 
 <h4>Neuen Artikel anlegen</h4>
-<img src="JSPimages/F57-Servletbsp.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+<img src="JSPimages/F57-Servletbsp.png" alt="CodeBeispiel" width="70%" height="70%" align="center"></br></br>
 
-<img src="JSPimages/F58-Servletbsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+<img src="JSPimages/F58-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 <h4>Neuer Artikel anlegen: Das konkrete Anlegen über die Bean</h4>
 <img src="JSPimages/F59-Servletbsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
@@ -422,11 +449,13 @@ aufrufen.</br></br>
 <img src="JSPimages/F61-Servletbsp.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
 
 <h4>Alle Artikel auflisten</h4>
-<img src="JSPimages/F62-Servletbsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+<img src="JSPimages/F62-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
-<img src="JSPimages/F63-Servletbsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+<img src="JSPimages/F63-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
-<img src="JSPimages/F64-Servletbsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+<img src="JSPimages/F64-Servletbsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
+
+		<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
 
 </p>
   </div>
@@ -434,7 +463,7 @@ aufrufen.</br></br>
 		
         <div class="textbox">
             <p>
-			<h2>Session-Handling</h2></br>
+			<h2 id="Kap6">6 Session-Handling</h2></br>
 			
 		<h4>Was ist nochmal eine Session?</h4>
 • Eine Session bezeichnet in der EDV eine stehende Verbindung eines Clients mit einem Server. </br>
@@ -459,17 +488,17 @@ aufrufen.</br></br>
 
 	
 <h4>Mit dem Servlet beginnt die Session...</h4>
-		<img src="JSPimages/F70-Sessionhandling.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F70-Sessionhandling.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
-		<img src="JSPimages/F71-Sessionhandling.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F71-Sessionhandling.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 	
 <h4>Mit dem Servlet beginnt die Session und es kommen Daten hinzu...</h4>
 		<img src="JSPimages/F72-Sessionhandling.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
 
 <h4>Alle Daten können über die Sessionweiterhin verwendet werden!<h4>
-		<img src="JSPimages/F73-Sessionhandling.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F73-Sessionhandling.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 		
-		<img src="JSPimages/F74-Sessionhandling.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F74-Sessionhandling.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 		
 		<img src="JSPimages/F75-Sessionhandling.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
 
@@ -481,7 +510,9 @@ aufrufen.</br></br>
 &nbsp &nbsp • Derselbe User im Frondend erzeugt also im Backend nur eine Session, die sowohl mit JSPs, als auch mit Servlets beliebig aufgerufen und/oder 
 verändert werden kann.</br>
 &nbsp &nbsp • Dies gilt übrigens auch für den Application-Kontext, der ja auch in einer JSP über die Standard-Variable application zugreifbar ist. </br>
-&nbsp &nbsp &nbsp &nbsp • JSPs und Servlets können also auch dieselbe ArtikelverwaltungsBean avb verwenden!	</br>	
+&nbsp &nbsp &nbsp &nbsp • JSPs und Servlets können also auch dieselbe ArtikelverwaltungsBean avb verwenden!	</br></br>	
+
+		<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
 			
 			
 			</p>
@@ -489,7 +520,7 @@ verändert werden kann.</br>
         
 	<div class="textbox">
         <p>
-		<h2>Session-Handling</h2></br>
+		<h2 id="Kap7">7 Session-Handling</h2></br>
 
 		<h4>Bilder in einer HTML-Datei</h4>
 • Wenn Sie statische Bilder wie JPG-, GIF- oder PNG-Dateien über ein Servlet übertragen wollen, so fügen Sie einfach den entsprechenden 
@@ -503,13 +534,14 @@ Kontext der HTML-Seite eingebunden und dargestellt.</br></br>
 		<img src="JSPimages/F79-Bilddynamisch.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
 
 		<h4>Bilder dynamisch erzeugen: Das HTML-Formular & die Antwort</h4>
-				<img src="JSPimages/F80-Bilddynamisch.png" alt="CodeBeispiel" width="60%" height="70%" align="center"></br></br>
+				<img src="JSPimages/F80-Bilddynamisch.png" alt="CodeBeispiel" width="70%" height="70%" align="center"></br></br>
 	
 		<h4>Bilder dynamisch erzeugen: 	Das bild-generierende Servlet</h4>
-		<img src="JSPimages/F81-Bilddynamisch.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
-		<img src="JSPimages/F82-Bilddynamisch.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F81-Bilddynamisch.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F82-Bilddynamisch.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
-			
+					<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+
 			
 			</p>
         </div>
@@ -518,7 +550,7 @@ Kontext der HTML-Seite eingebunden und dargestellt.</br></br>
 		
 		<div class="textbox">
         <p>
-		<h2>JSPs und Servlets im MVC / MVP</h2></br>
+		<h2 id="Kap8">8 JSPs und Servlets im MVC / MVP</h2></br>
 		
 		<h4>MVC mit JSPs und Servlets</h4>
 		<img src="JSPimages/F84-JSPMVC.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
@@ -530,13 +562,16 @@ Kontext der HTML-Seite eingebunden und dargestellt.</br></br>
 &nbsp &nbsp • Zwar mildert die Verwendung von Tag-Bibliotheken wie JSTL dieses Problem etwas, weil kein Java-Code mehr benötigt wird. </br>
 &nbsp &nbsp • Das konzeptionelle Grundproblem der Vermischung von Präsentation mit fachlicher Funktionalität bleibt jedoch bestehen.</br>
 • Aus diesen Nachteilen entstand die Model-2-Architektur für Webanwendungen, die ihren Einsatz im Struts-Framework gefunden hat.</br></br>
+		
+				<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+
 		</p>
         </div>
 	
 		
 		<div class="textbox">
             <p>
-			<h2>Java Architecture for XML Binding JaxB</h2></br>
+			<h2 id="Kap9">9 Java Architecture for XML Binding JaxB</h2></br>
 
 			<h4>Was ist JaxB?</h4>
 
@@ -557,6 +592,9 @@ erzeugen und umgekehrt.</br>
 &nbsp &nbsp • Hierbei wird aus einem gegebenen XML-Dokument wieder ein Baum von Java-Objekten generiert. </br>
 		<img src="JSPimages/F88-JavaXML.png" alt="CodeBeispiel" width="50%" height="60%" align="center"></br></br>
 
+		
+				<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
+
 		</p>
         </div>
 	
@@ -564,7 +602,7 @@ erzeugen und umgekehrt.</br>
 	
 		<div class="textbox">
             <p>
-			<h2>Ein JaxB-Beispiel: Studentenverwaltung</h2></br>
+			<h2 id="Kap10">10 Ein JaxB-Beispiel: Studentenverwaltung</h2></br>
 
 		<h4>Eine Studentenverwaltung...</h4>
 • Eine Studentenverwaltung verwaltet beliebig viele Studenten. </br>
@@ -587,7 +625,7 @@ erzeugen und umgekehrt.</br>
 		<img src="JSPimages/F96-JaxBBsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
 
 			<h4>Test zum Schreiben</h4>
-		<img src="JSPimages/F97-JaxBBsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F97-JaxBBsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 		<img src="JSPimages/F98-JaxBBsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
 
 			<h4>Test zum Schreiben: Die Konsolenausgabe</h4>
@@ -599,10 +637,12 @@ erzeugen und umgekehrt.</br>
 		
 			<h4>Test zum Lesen</h4>
 		<img src="JSPimages/F101-JaxBBsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
-		<img src="JSPimages/F102-JaxBBsp.png" alt="CodeBeispiel" width="70%" height="80%" align="center"></br></br>
+		<img src="JSPimages/F102-JaxBBsp.png" alt="CodeBeispiel" width="80%" height="80%" align="center"></br></br>
 
 			<h4>Test zum Lesen: Die Konsolenausgabe</h4>
-		<img src="JSPimages/F103-JaxBBsp.png" alt="CodeBeispiel" width="50%" height="60%" align="center"></br></br>
+		<img src="JSPimages/F103-JaxBBsp.png" alt="CodeBeispiel" width="60%" height="60%" align="center"></br></br>
+
+				<a href = #Inhalt style="color:white">Zurück zum Anfang</a><br/>
 
 			</p>
         </div>
