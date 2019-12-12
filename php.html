@@ -42,7 +42,7 @@
         <div id="header">
             <!-- Cookie Banner -->
             <div id="cookie-message">
-                <p>
+                <p style="margin-top: 0em; margin-bottom: 0em;">
                     Diese Webseite benutzt einen Cookie um dir eine individualisierte Webseite präsentieren zu können.
                     <a href="datenschutz.html" title="View our Cookie Policy">Finde mehr heraus über Cookies und Datenschutz</a>
                 </p>
@@ -158,7 +158,7 @@
                     <li>ein erneutes define() führt zu einer Fehlermeldung</li>
                     <li>Konstanten können nicht mehr entfernt werden</li>
                 </ul>
-                
+
                 <h2 id="kapitel22">Variablen &amp; Datentypen</h2>
                 <ul>
                     <li>es gibt keine unmittelbar sichtbaren Datentypen</li>
@@ -174,7 +174,7 @@
                         </ul>
                     </li>
                 </ul>
-                
+
                 <h2 id="kapitel23" >HalloWelt in PHP</h2>
 
                 <div class="codebox">
@@ -687,8 +687,14 @@ echo($kunden['K3']['VN'].' '.$kunden['K3']['NN'].'&lt;br/&gt;');
                 <div class="textbox" id="kapitel4">
                     <h1>Session-Handling und Weiterleitung</h1>
                     <h2>Weiterleitung ins System:</h2>
-                    <h3>Ab jetzt immer prüfen!</h3>
                     <ul>
+                        <li>PHP legt einen vergebenen Session-ID im Ordner \xampp\tmp\ an, eine Datei mit dem Namen
+                            sess_66656 wenn Ihre Session-ID 66656 ist</li>
+                        <li>Diese Datei hat dann folgenden Inhalt:
+                            <ul><li>USER|s:0:"";Pass|s:0:"";Auth|i:0;</li></ul>                            
+                        </li>
+                        <li>Speichern Sie also NIE Passwörter in einer Session:
+                            Die liegen dann im Klartext in der Dateistruktur des Servers!</li>
                         <li>Wenn Sie bereits HTML-Code an den Client gesendet haben, beispielsweise nur , dann können Sie den HTTPHeader nicht mehr modifizieren, da er bereits zum Client gesendet wurde!</li>
                         <li>Alle Prüfungen müssen also erfolgen, bevor die erste Ausgabe an den Client erfolgt.</li>
                         <li>HTTP ist zustandslos:
@@ -698,6 +704,18 @@ echo($kunden['K3']['VN'].' '.$kunden['K3']['NN'].'&lt;br/&gt;');
                                 <li>Ein möglicher Angriff auf das System wäre ein Session-Hijacking!</li>
                             </ul>
                         </li>
+
+                        <li>Session Funktionen:
+                            <ul>
+                                <li>session_start() –&gt; startet eine neue Session oder übernimmt eine bereits vorhandene</li>
+                                <li>$erg=session_id() -&gt; gibt den eindeutigen Identifier der eigenen, aktuellen Session zurück</li>
+                                <li>%erg=session_encode() -&gt; liefert eine Liste mit allen abgespeicherten Variablen der aktuellen Session</li>
+                                <li>session_unregister(''name'') -&gt; entfernt eine Variable mit dem Namen ''name'' aus der Liste der Variablen einer Session</li>
+                                <li>session_unset -&gt; löscht den Inhalt aller Variablen, die in der aktuellen Session deklariert wurden, die Session selbst bleibt jedoch bestehen</li>
+                                <li>session_destroy -&gt; beendet eine Session und löscht alle Daten, die in der aktuellen Session verwendet wurden, die Session-ID wird wieder freigegeben</li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
 

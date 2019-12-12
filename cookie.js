@@ -45,7 +45,6 @@
 	    link.appendChild(textNode);
 	    ausgabe.appendChild(link);
         } else {
-            //openPopUp
             cookieMessage.style.display = 'block';          
             var ausgabe = document.getElementById('info');
             ausgabe.innerHTML = "Wir haben bisher keine Informationen zu Ihren Besuch Gespeichert.";
