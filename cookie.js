@@ -11,29 +11,30 @@
 			acceptCookie();
 	    var link = document.createElement("a");
 	    var infoText = user;
-	    	if(user == "HTML") {
+	    console.log(user);
+	    	if(user === "HTML") {
 			user = "html5";
-		} else if(user == "CSS") {
+		} else if(user === "CSS") {
 			user = "css3";
-		} else if(user == "JSP, Servlets, JAXB") {
+		} else if(user === "JSP, Servlets, JAXB") {
 			user = "jsp_servlets_jaxb";
-		} else if(user == "WEB Grundlagen") {
+		} else if(user === "WEB Grundlagen") {
 			user = "grundlagen";
-		} else if(user == "Startseite") {
+		} else if(user === "Startseite") {
 			user = "index";
-		} else if(user == "Javascript (2)") {
+		} else if(user === "Javascript (2)") {
 			user = "javascript2";
-		} else if(user == "Javascript") {
+		} else if(user === "Javascript") {
 			user = "javascript";
-		} else if(user == "PHP") {
+		} else if(user === "PHP") {
 			user = "php";
-		} else if(user == "NodeJS") {
+		} else if(user === "NodeJS") {
 			user = "nodejs";
-		} else if(user == "Datenschutz") {
+		} else if(user === "Datenschutz") {
 			user = "datenschutz";
-		} else if(user == "Impressum") {
+		} else if(user === "Impressum") {
 			user = "Impressum";
-		} else if(user =="CSS 2"){
+		} else if(user === "CSS (2)"){
 			user = "css3-2";
 		}
             
@@ -89,5 +90,6 @@ function acceptCookie() {
     var cookieMessage = document.getElementById('cookie-message');
     cookieMessage.style.display = 'none';
     var titel = document.title;
+    console.log("titel: " + titel);
     setCookie("webHSMA", titel, 365);
 }
