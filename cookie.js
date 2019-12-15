@@ -11,42 +11,42 @@
 			acceptCookie();
 	    var link = document.createElement("a");
 	    var infoText = user;
-	    console.log(user);
-	    	if(user === "HTML") {
+	    	if(user == "HTML") {
 			user = "html5";
-		} else if(user === "CSS") {
+		} else if(user == "CSS") {
 			user = "css3";
-		} else if(user === "JSP, Servlets, JAXB") {
+		} else if(user == "CSS (2)") {
+			user = "css3-2";
+		} else if(user == "JSP, Servlets, JAXB") {
 			user = "jsp_servlets_jaxb";
-		} else if(user === "WEB Grundlagen") {
+		} else if(user == "WEB Grundlagen") {
 			user = "grundlagen";
-		} else if(user === "Startseite") {
+		} else if(user == "Startseite") {
 			user = "index";
-		} else if(user === "Javascript (2)") {
+		} else if(user == "Javascript (2)") {
 			user = "javascript2";
-		} else if(user === "Javascript") {
+		} else if(user == "Javascript") {
 			user = "javascript";
-		} else if(user === "PHP") {
+		} else if(user == "PHP") {
 			user = "php";
-		} else if(user === "NodeJS") {
+		} else if(user == "NodeJS") {
 			user = "nodejs";
-		} else if(user === "Datenschutz") {
+		} else if(user == "Datenschutz") {
 			user = "datenschutz";
-		} else if(user === "Impressum") {
+		} else if(user == "Impressum") {
 			user = "Impressum";
-		} else if(user === "CSS (2)"){
+		} else if(user =="CSS 2"){
 			user = "css3-2";
 		}
             
             
-	    var linkText = user.toLowerCase() + ".html"
+	    var linkText = user.toLowerCase() + ".php"
 	    link.setAttribute("href", linkText);
 	    var text = link.href;
 	    var textNode = document.createTextNode(infoText);
 	    link.appendChild(textNode);
 	    ausgabe.appendChild(link);
         } else {
-            //openPopUp
             cookieMessage.style.display = 'block';          
             var ausgabe = document.getElementById('info');
             ausgabe.innerHTML = "Wir haben bisher keine Informationen zu Ihren Besuch Gespeichert.";
@@ -90,6 +90,5 @@ function acceptCookie() {
     var cookieMessage = document.getElementById('cookie-message');
     cookieMessage.style.display = 'none';
     var titel = document.title;
-    console.log("titel: " + titel);
     setCookie("webHSMA", titel, 365);
 }

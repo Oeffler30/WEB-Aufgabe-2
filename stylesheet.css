@@ -1,13 +1,17 @@
 *{
-  /*Some settings to fix some ugly standard element settings like standard margins or paddings
-   so we can override them cleanly later*/
   padding: 0;
   margin: 0;
 }
 
-//Cookiebanner formatierung
+/*Cookiebanner formatierung*/
 .js_enabled #cookie-message {
     display: none;
+}
+
+h2{color: red;}
+
+h4{
+  font-color: red;
 }
 
 #cookie-message {
@@ -43,7 +47,6 @@ body{
 }
 
 .content-container {
-  /*display the text boxes in the middle*/
   width: 80%;
   margin: 14em auto 0;
 }
@@ -53,10 +56,8 @@ body{
   width: 100%;
   position: fixed;
   top: 0;
-  /*hide the blur overflow from the background-picture*/
   margin-top: -5px;
   overflow-y: hidden;
-  /*make the collapsing of the header go smoothly*/
   transition: 0.5s;
 }
 
@@ -68,17 +69,13 @@ body{
   background-image: url("header3.jpg");
   height: 100%;
   width: 100%;
-  /*position the background picture nicely*/
   background-size: cover;
   background-position-y: 100%;
   background-position-x: 82%;
-  /*make the background picture blurry*/
   filter: blur(3px);
 }
 
 #navbar{
-
-  /*make the navbar stick to the bottom of the header*/
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -87,13 +84,11 @@ body{
 
 
 #nav {
-  /*position the navbar like the content container*/
   margin: 0 10%;
   width: 80%;
 }
 
 #nav ul li{
-  /*display the li elements inline but still sizable*/
   display: inline-block;
   width: 15%;
   text-align: center;
@@ -107,19 +102,15 @@ body{
   font-size: 15pt;
   padding: 0.5em;
   box-sizing: border-box;
-  /*box-sizing border-box wirkung: padding + width 100% sorgen nicht mehr dafür dass
-  das a element größer ist als es sollte;*/
   text-decoration: none;
   color: white;
   width: 100%;
   height: 100%;
-  /*damit man das element noch resizen kann*/
   display: inline-block;
 }
 
 
 #nav ul li:hover, #footer li:hover{
-  /*wenn man über die navigation oder über den footer hovert, soll sich der hintergrund ändern*/
   background-color: #1565C0;
 }
 
@@ -129,9 +120,153 @@ body{
   margin: 1em 0;
 }
 
-/*-----------------für WEB Grundlagen & NodeJS------------------*/
+a:link, a:visited
+{
+color: white;
+}
+
+
+a:active, a:hover
+{
+color:blue;
+}
+
+/*------------------------------------*/
+
+/*css*/
+a:link, a:visited {
+	color: white;
+}
+    
+    
+a:active, a:hover {
+	color: white;
+}
+
+/*html5*/
+.inhaltverzeichnis {text-decoration: none;}
+
+            p { margin-top: 1em; margin-bottom: 1em;}
+            .codebox {
+                color: #F5F5F5;
+                padding:10px;
+                padding-left: 25px;
+                background-color: #282828;
+                font-style: italic;
+            }
+            .neben {
+                color: #F5F5F5;
+                float: left;
+                padding: 10px;
+                background: #282828;
+            }
+            .abbildung {
+                font-style: italic;
+                color: #F5F5F5;
+                padding:25px;
+                background-color: #282828;
+				text-align:left;
+            }
+
+/*javascript:*/
+.content {
+  		padding-top: 30px;
+  		padding-bottom: 30px;
+  	}
+  	code {
+  		padding:30px;
+  		font-family: "Bahnschrift";
+
+  	}
+  	.codebox {
+  		color: #F5F5F5;
+  		padding:10px;
+      	padding-left: 25px;
+  		background-color: #282828;
+  	}
+  	.goals {
+  		padding-top: 30px;
+  		padding-bottom: 30px;
+  		font-style:italic;
+  	}
+  	.goals li {
+  		margin-left: 30px;
+  	}
+  	.goals ul {
+  		margin:10px;
+  	}
+  	.absatz {
+  		padding-top:5px;
+  		padding-bottom: 5px;
+  	}
+  	.title {
+  		color:#AACCFF;
+  		padding-top: 130px;
+    		margin-top: -130px;
+  	}
+  	.Iv {
+  		color:white;
+  	}
+	.Iv:hover {
+		color:#AACCFF;
+	  }
+
+/*javascript2*/
+h2.index {margin: 0.5em 1em;}
+        ul.index {margin: 0 2em;}
+        ul.index a {text-decoration: none;color: white; padding: 0.5em; display: inline-block; width: 13em; }
+        ul.index a:hover { background-color: #1565C0;}
+        .chapter {margin: 1em 0 0; }
+        .headline2 {margin-bottom: 1em;}
+        .subtopic {margin: 1em 0 1em 1em;}
+        .subpoint {margin: 1em 0 1em 1em;}
+        .subsubpoint {margin: 1em 0 1em 1em;}
+        ul.bulletpointul, ol.bulletpointul{margin: 1em 0 1em 1em;}
+        ul li.bulletpoint2, ol li.bulletpoint2 {margin-left: 1em;}
+        ul li.bulletpoint3, ol li.bulletpoint3 {margin-left: 2em;}
+        ul li.bulletpoint4, ol li.bulletpoint4 {margin-left: 3em;}
+        .chapter p.paragraph {margin: 1em 0;}
+        .chapter img {max-width: 100%;margin: 1em 0;}
+        .chapter pre {white-space: pre-wrap;}
+        .chapter code {display: inline-block;}
+        .chapter a {text-decoration: none;color: white;}
+        .textbox table {border-collapse: collapse;margin: 1em 0;}
+        .textbox table, .textbox th, .textbox td {border: 1px solid black; padding: 0.5em;}
+        .textbox tr:nth-child(even) {background-color: #242424;}
+        .textbox thead {background-color: #575757}
+
+/*php*/
+ul { 
+                padding-left: 1em;
+            }
+            ol { 
+                padding-left: 1em;
+            }
+            h2 {
+                padding-top: 1em;
+            }
+            .codebox {
+                color: #F5F5F5;
+                padding:10px;
+                padding-left: 25px;
+                background-color: #282828;
+                font-style: italic;
+            }
+            .inhaltverzeichnis {text-decoration: none;}
+
+            p { margin-top: 1em; margin-bottom: 1em;}
+            .codebox {
+                color: #F5F5F5;
+                padding:10px;
+                padding-left: 25px;
+                background-color: #282828;
+                font-style: italic;
+            }
+
+/*------------------------------------*/
+
 .definition {
-	background-color: orange;
+	background-color: blue;
 	border-color: red;
 	color: black;
 	padding: 0.5% 1% 1% 1%
@@ -159,10 +294,6 @@ body{
 	color: LightGreen;
 }
 
-.textCode {
-	font-family: "Courier New", Courier, monospace;
-}
-
 .liste {
 	padding-left: 5%;
 	padding-right: 5%;
@@ -179,11 +310,6 @@ body{
 	justify-content: space-around;
 }
 
-#side1 {
-	display:flex;
-    	flex-direction:column;
-}
-/*--------------------------------------------------------------*/
 
 .footer-container {
   width: 100%;
@@ -225,17 +351,14 @@ body{
   position: absolute;
   left: 0;
   top: 0;
-  /*size*/
   width: 1em;
   padding: 1em;
   font-size: 15px;
   text-align: center;
-  /*icon-characteristics*/
   cursor: pointer;
   display: none;
 }
 
-/* icon lines*/
 #navbar .icon hr {
   margin: 3px 0 0;
 }
@@ -245,12 +368,17 @@ body{
     color: aliceblue;
 }
 
-/*below 768px*/
 @media screen and (max-width: 768px) {
 
   .nodeBild {
 	width: 100%;
 	height: auto;
+  }
+
+  #cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   #header {
@@ -261,13 +389,10 @@ body{
   }
 
   #navbar {
-    /*the icons position is dependent on this*/
     position: relative;
   }
 
   .icon {
-    /*show icon*/
-    /*note: !important after a css value overrides the css order rules*/
     display: block !important;
   }
   .icon:hover {
@@ -277,12 +402,10 @@ body{
   #nav {
     margin: 0;
     width: 100%;
-    /*default is hidden unless it has the non-collapsed class which is added via js*/
     display: none;
   }
 
   #nav ul li {
-    /*let li elements take 100% width*/
     display: block;
     width: 100%;
   }
@@ -292,11 +415,9 @@ body{
     width: 95%;
   }
   .content-container.not-collapsed {
-    /*formel für ersten wert : (4 + (anzahl der nav elemente *2))em*/
     margin: 23em auto 0;
   }
 
-  /*show nav after the icon is clicked*/
   #nav.not-collapsed {
     display: block;
   }
