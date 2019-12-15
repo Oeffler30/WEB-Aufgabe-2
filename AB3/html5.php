@@ -3,9 +3,11 @@
     <head>-->
         <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
         <!--<link rel="stylesheet" href="stylesheet.css" type="text/css">
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">-->
+        <?php include_once('header_php.php'); ?>
         <title>HTML</title>
-        <script src="scroll+navicon.js"></script>    
+        <?php include_once('header2_php.php'); ?>
+        <!--<script src="scroll+navicon.js"></script>    
         <style>
             .inhaltverzeichnis {text-decoration: none;}
 
@@ -51,7 +53,6 @@
                 </form>
             </div>
             <div id="header-image"></div>-->
-            <?php include_once('header_php.php'); ?>
             <div id="navbar">
                 <div id="nav">
                     <ul>

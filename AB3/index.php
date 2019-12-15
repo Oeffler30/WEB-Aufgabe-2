@@ -4,9 +4,11 @@
         <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
         <!--<link rel="stylesheet" href="stylesheet.css" type="text/css">
         <meta charset="UTF-8">
-        <script src="scroll+navicon.js"></script>
+        <script src="scroll+navicon.js"></script>-->
+        <?php include_once('header_php.php'); ?>
         <title>Startseite</title>
-        <script src="cookie.js"></script>
+        <?php include_once('header2_php.php'); ?>
+        <!--<script src="cookie.js"></script>
         <style>
             ul { 
                 padding-left: 1em;
@@ -31,7 +33,6 @@
                 </form>
             </div>
             <div id="header-image"></div>-->
-            <?php include_once('header_php.php'); ?>
             <div id="navbar">
                 <div id="nav">
                     <ul>
@@ -45,6 +46,7 @@
                         <li><a href="jsp_servlets_jaxb.php">JSP, Servlets, JAXB</a></li>
                         <li><a href="php.php">PHP</a></li>
                         <li><a href="nodejs.php">NodeJS</a></li>
+                        <li><a href="kontakt.php">Kontakt</a></li>
                     </ul>
                 </div>
                 <a class="icon">

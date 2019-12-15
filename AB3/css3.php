@@ -16,9 +16,11 @@
     {
     color: white;
     }
-    </style>
+    </style>-->
+    <?php include_once('header_php.php'); ?>
   <title>CSS</title>
-</head>
+  <?php include_once('header2_php.php'); ?>
+<!--</head>
 <body>
     <script>
         document.body.className = document.body.className + " js_enabled";
@@ -36,7 +38,6 @@
         </form>
     </div>
         <div id="header-image"></div>-->
-        <?php include_once('header_php.php'); ?>
         <div id="navbar">
             <div id="nav">
                 <ul>

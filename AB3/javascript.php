@@ -46,9 +46,11 @@
 		color:#AACCFF;
 	  }
   </style>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8">-->
+  <?php include_once('header_php.php'); ?>
   <title>Javascript</title>
-    <script src="scroll+navicon.js"></script>
+  <?php include_once('header2_php.php'); ?>
+    <!--<script src="scroll+navicon.js"></script>
 </head>
 <body>
     <script>
@@ -67,7 +69,6 @@
         </form>
     </div>
         <div id="header-image"></div>-->
-        <?php include_once('header_php.php'); ?>
         <div id="navbar">
             <div id="nav">
                 <ul>

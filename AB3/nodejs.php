@@ -4,9 +4,11 @@
     <!-- header image: https://pixabay.com/photos/server-space-the-server-room-dark-2160321/ -->
   <!--<link rel="stylesheet" href="stylesheet.css" type="text/css">
   <meta charset="UTF-8">
-    <script src="scroll+navicon.js"></script>
+    <script src="scroll+navicon.js"></script>-->
+    <?php include_once('header_php.php'); ?>
   <title>NodeJS</title>
-</head>
+  <?php include_once('header2_php.php'); ?>
+<!--</head>
 <body>
     <script>
         document.body.className = document.body.className + " js_enabled";
@@ -24,7 +26,6 @@
         </form>
     </div>
         <div id="header-image"></div>-->
-        <?php include_once('header_php.php'); ?>
         <div id="navbar">
             <div id="nav">
                 <ul>
